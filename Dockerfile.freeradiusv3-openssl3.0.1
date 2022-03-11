@@ -126,6 +126,9 @@ RUN ./configure \
 
 RUN make -j4 && make install
 
+# Configs
+COPY config/authorize /etc/raddb/mods-config/files/authorize
+
 #
 #   Default HOME
 #
@@ -135,3 +138,5 @@ WORKDIR /root
 #   Usual ports auth/accounting/coa/ssh
 #
 EXPOSE 1812/udp 1812/tcp 1813/udp 1813/tcp 3799/udp 22/tcp
+
+CMD ["radiusd", "-XXx", "-l", "/var/log/radiusd.log"]
