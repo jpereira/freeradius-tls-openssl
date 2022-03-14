@@ -47,7 +47,7 @@ ssl3.stop:
 	$(DOCKER) rm -f "test-freeradius-v3-ssl3.0.x" 1> /dev/null 2>&1 || true
 
 ssl3.start: ssl3.stop
-	$(DOCKER) run -dt --rm --name "test-freeradius-v3-ssl3.0.x" --hostname "test-freeradius-v3-ssl1.1.x" networkradius/test-freeradius-v3-ssl3.0.x
+	$(DOCKER) run -dt --rm --name "test-freeradius-v3-ssl3.0.x" --hostname "test-freeradius-v3-ssl3.0.x" networkradius/test-freeradius-v3-ssl3.0.x
 
 ssl3.shell:
 	$(DOCKER) exec -it test-freeradius-v3-ssl3.0.x /bin/bash
