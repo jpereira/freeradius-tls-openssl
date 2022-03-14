@@ -1,17 +1,27 @@
 DOCKER := docker
-DOCKET_OPTS :=
 
-build: build.frv3_openssl1.1.x build.frv3_openssl3.0.x
+build: ssl1.build ssl3.build
 
-build.frv3_openssl1.1.x:
-	$(DOCKER) build $(DOCKER_OPTS) "$(PWD)" -f "Dockerfile.freeradiusv3-openssl1.1.1j" -t networkradius/test-freeradius-v3-ssl1.1.x
+start: ssl1.start ssl3.start
 
-build.frv3_openssl3.0.x:
-	$(DOCKER) build $(DOCKER_OPTS) "$(PWD)" -f "Dockerfile.freeradiusv3-openssl3.0.1" -t networkradius/test-freeradius-v3-ssl3.0.x
+# openssl 1.1.x
+ssl1.start:
+	$(DOCKER) rm -f "test-freeradius-v3-ssl1.1.x" 1> /dev/null 2>&1 || true
+	$(DOCKER) run -dt --rm --name "test-freeradius-v3-ssl1.1.x" --hostname "test-freeradius-v3-ssl1.1.x" networkradius/test-freeradius-v3-ssl1.1.x
 
-shell.ssl1:
-	$(DOCKER) run --rm --name "test-freeradius-v3-ssl1.1.x" --hostname "test-freeradius-v3-ssl1.1.x" -it networkradius/test-freeradius-v3-ssl1.1.x /bin/bash
+ssl1.build:
+	$(DOCKER) build "$(PWD)" -f "Dockerfile.freeradiusv3-openssl1.1.1j" -t networkradius/test-freeradius-v3-ssl1.1.x
 
-shell.ssl3:
-	$(DOCKER) run --rm --name "test-freeradius-v3-ssl3.0.x" --hostname "test-freeradius-v3-ssl3.0.x" -it networkradius/test-freeradius-v3-ssl3.0.x /bin/bash
+ssl1.shell:
+	$(DOCKER) exec -it test-freeradius-v3-ssl1.1.x /bin/bash
 
+# openssl 3.0.x
+ssl3.build:
+	$(DOCKER) build "$(PWD)" -f "Dockerfile.freeradiusv3-openssl3.0.1" -t networkradius/test-freeradius-v3-ssl3.0.x
+
+ssl3.start:
+	$(DOCKER) rm -f "test-freeradius-v3-ssl3.0.x" 1> /dev/null 2>&1 || true
+	$(DOCKER) run -dt --rm --name "test-freeradius-v3-ssl3.0.x" --hostname "test-freeradius-v3-ssl1.1.x" networkradius/test-freeradius-v3-ssl3.0.x
+
+ssl3.shell:
+	$(DOCKER) exec -t test-freeradius-v3-ssl1.1.x --rm --name "test-freeradius-v3-ssl3.0.x" --hostname "test-freeradius-v3-ssl3.0.x" -it networkradius/test-freeradius-v3-ssl3.0.x /bin/bash

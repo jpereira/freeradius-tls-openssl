@@ -122,5 +122,4 @@ WORKDIR /root
 #
 EXPOSE 1812/udp 1812/tcp 1813/udp 1813/tcp 3799/udp 22/tcp
 
-CMD ["radiusd", "-XXx", "-l", "/var/log/radiusd.log"]
-
+CMD ["/usr/sbin/radiusd", "-Xx", "-l", "/var/log/radiusd.log"]
