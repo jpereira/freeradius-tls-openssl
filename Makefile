@@ -12,11 +12,19 @@ help:
 
 build: ssl1.build ssl3.build
 
+restart: stop start
+
 start: ssl1.start ssl3.start
 
+stop: ssl1.stop ssl3.stop
+
+auth: ssl1.auth ssl3.auth
+
 # openssl 1.1.x
-ssl1.start:
+ssl1.stop:
 	$(DOCKER) rm -f "test-freeradius-v3-ssl1.1.x" 1> /dev/null 2>&1 || true
+
+ssl1.start: ssl1.stop
 	$(DOCKER) run -dt --rm --name "test-freeradius-v3-ssl1.1.x" --hostname "test-freeradius-v3-ssl1.1.x" networkradius/test-freeradius-v3-ssl1.1.x
 
 ssl1.build:
@@ -28,12 +36,17 @@ ssl1.shell:
 ssl1.logs:
 	$(DOCKER) exec -it test-freeradius-v3-ssl1.1.x tail -f /var/log/radiusd.log
 
+ssl1.auth:
+	$(DOCKER) exec -it test-freeradius-v3-ssl1.1.x eapol_test -s testing123 -c /root/eap-ttls-mschapv2.conf
+
 # openssl 3.0.x
 ssl3.build:
 	$(DOCKER) build "$(PWD)" -f "Dockerfile.freeradiusv3-openssl3.0.1" -t networkradius/test-freeradius-v3-ssl3.0.x
 
-ssl3.start:
+ssl3.stop:
 	$(DOCKER) rm -f "test-freeradius-v3-ssl3.0.x" 1> /dev/null 2>&1 || true
+
+ssl3.start: ssl3.stop
 	$(DOCKER) run -dt --rm --name "test-freeradius-v3-ssl3.0.x" --hostname "test-freeradius-v3-ssl1.1.x" networkradius/test-freeradius-v3-ssl3.0.x
 
 ssl3.shell:
@@ -41,3 +54,6 @@ ssl3.shell:
 
 ssl3.logs:
 	$(DOCKER) exec -it test-freeradius-v3-ssl3.0.x tail -f /var/log/radiusd.log
+
+ssl3.auth:
+	$(DOCKER) exec -it test-freeradius-v3-ssl3.0.x eapol_test -s testing123 -c /root/eap-ttls-mschapv2.conf 2>&1
