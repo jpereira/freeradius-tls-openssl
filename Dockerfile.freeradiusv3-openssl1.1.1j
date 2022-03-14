@@ -112,6 +112,12 @@ RUN make -j4 && make install
 # Configs
 COPY config/authorize /etc/raddb/mods-config/files/authorize
 
+# eapol_test
+WORKDIR /opt/src/freeradius-server
+RUN ./scripts/ci/eapol_test-build.sh
+RUN cp -f ./scripts/ci/eapol_test/eapol_test /usr/local/bin
+COPY config/eap-ttls-mschapv2.conf /root/eap-ttls-mschapv2.conf
+
 #
 #   Default HOME
 #
