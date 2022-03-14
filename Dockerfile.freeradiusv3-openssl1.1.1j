@@ -121,6 +121,7 @@ COPY config/eap-ttls-mschapv2.conf /root/eap-ttls-mschapv2.conf
 #
 #   Default HOME
 #
+COPY config/dot.bash_history /root/.bash_history
 WORKDIR /root
 
 #
