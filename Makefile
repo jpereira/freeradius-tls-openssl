@@ -37,7 +37,7 @@ ssl3.start:
 	$(DOCKER) run -dt --rm --name "test-freeradius-v3-ssl3.0.x" --hostname "test-freeradius-v3-ssl1.1.x" networkradius/test-freeradius-v3-ssl3.0.x
 
 ssl3.shell:
-	$(DOCKER) exec -t test-freeradius-v3-ssl1.1.x --rm --name "test-freeradius-v3-ssl3.0.x" --hostname "test-freeradius-v3-ssl3.0.x" -it networkradius/test-freeradius-v3-ssl3.0.x /bin/bash
+	$(DOCKER) exec -it test-freeradius-v3-ssl3.0.x /bin/bash
 
 ssl3.logs:
 	$(DOCKER) exec -it test-freeradius-v3-ssl3.0.x tail -f /var/log/radiusd.log
