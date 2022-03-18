@@ -1,3 +1,9 @@
+#FR_SOURCE := https://github.com/FreeRADIUS/freeradius-server.git
+#FR_BRANCH := v3.0.x
+
+FR_REPO := https://github.com/jpereira/freeradius-server.git
+FR_BRANCH := v3/fix-ssl
+
 DOCKER := docker
 
 help:
@@ -5,9 +11,11 @@ help:
 	@echo "start       - Start both containers"
 	@echo "ssl1.shell  - Get in test-freeradius-v3-ssl1.1.x containers"
 	@echo "ssl1.logs   - Show all logs of test-freeradius-v3-ssl1.1.x"
+	@echo "ssl1.auth   - Auth check"
 	@echo ""
 	@echo "ssl3.shell  - Get in test-freeradius-v3-ssl3.0.x containers"
 	@echo "ssl3.logs   - Show all logs of test-freeradius-v3-ssl3.0.x"
+	@echo "ssl3.auth   - Auth check"
 	@echo ""
 
 build: ssl1.build ssl3.build
@@ -28,7 +36,7 @@ ssl1.start: ssl1.stop
 	$(DOCKER) run -dt --rm --name "test-freeradius-v3-ssl1.1.x" --hostname "test-freeradius-v3-ssl1.1.x" networkradius/test-freeradius-v3-ssl1.1.x
 
 ssl1.build:
-	$(DOCKER) build "$(PWD)" -f "Dockerfile.freeradiusv3-openssl1.1.1j" -t networkradius/test-freeradius-v3-ssl1.1.x
+	$(DOCKER) build --build-arg fr_repo=$(FR_REPO) --build-arg fr_branch=$(FR_BRANCH) "$(PWD)" -f "Dockerfile.freeradiusv3-openssl1.1.1j" -t networkradius/test-freeradius-v3-ssl1.1.x
 
 ssl1.shell:
 	$(DOCKER) exec -it test-freeradius-v3-ssl1.1.x /bin/bash
@@ -41,7 +49,7 @@ ssl1.auth:
 
 # openssl 3.0.x
 ssl3.build:
-	$(DOCKER) build "$(PWD)" -f "Dockerfile.freeradiusv3-openssl3.0.1" -t networkradius/test-freeradius-v3-ssl3.0.x
+	$(DOCKER) build --build-arg fr_repo=$(FR_REPO) --build-arg fr_branch=$(FR_BRANCH) "$(PWD)" -f "Dockerfile.freeradiusv3-openssl3.0.1" -t networkradius/test-freeradius-v3-ssl3.0.x
 
 ssl3.stop:
 	$(DOCKER) rm -f "test-freeradius-v3-ssl3.0.x" 1> /dev/null 2>&1 || true
