@@ -1,0 +1,929 @@
+Fri Mar 18 17:23:28 2022 : Debug: (0) Received Access-Request Id 0 from 127.0.0.1:52308 to 127.0.0.1:1812 length 132
+Fri Mar 18 17:23:28 2022 : Debug: (0)   User-Name = "anonymous"
+Fri Mar 18 17:23:28 2022 : Debug: (0)   NAS-IP-Address = 127.0.0.1
+Fri Mar 18 17:23:28 2022 : Debug: (0)   Calling-Station-Id = "02-00-00-00-00-01"
+Fri Mar 18 17:23:28 2022 : Debug: (0)   Framed-MTU = 1400
+Fri Mar 18 17:23:28 2022 : Debug: (0)   NAS-Port-Type = Wireless-802.11
+Fri Mar 18 17:23:28 2022 : Debug: (0)   Service-Type = Framed-User
+Fri Mar 18 17:23:28 2022 : Debug: (0)   Connect-Info = "CONNECT 11Mbps 802.11b"
+Fri Mar 18 17:23:28 2022 : Debug: (0)   EAP-Message = 0x027d000e01616e6f6e796d6f7573
+Fri Mar 18 17:23:28 2022 : Debug: (0)   Message-Authenticator = 0xc976d32b20544f9d47460937b4a55fa5
+Fri Mar 18 17:23:28 2022 : Debug: (0) session-state: No State attribute
+Fri Mar 18 17:23:28 2022 : Debug: (0) # Executing section authorize from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (0)   authorize {
+Fri Mar 18 17:23:28 2022 : Debug: (0)     modsingle[authorize]: calling mschap (rlm_mschap)
+Fri Mar 18 17:23:28 2022 : Debug: (0)     modsingle[authorize]: returned from mschap (rlm_mschap)
+Fri Mar 18 17:23:28 2022 : Debug: (0)     [mschap] = noop
+Fri Mar 18 17:23:28 2022 : Debug: (0)     modsingle[authorize]: calling eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (0) eap: Peer sent EAP Response (code 2) ID 125 length 14
+Fri Mar 18 17:23:28 2022 : Debug: (0) eap: EAP-Identity reply, returning 'ok' so we can short-circuit the rest of authorize
+Fri Mar 18 17:23:28 2022 : Debug: (0)     modsingle[authorize]: returned from eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (0)     [eap] = ok
+Fri Mar 18 17:23:28 2022 : Debug: (0)   } # authorize = ok
+Fri Mar 18 17:23:28 2022 : Debug: (0) Found Auth-Type = eap
+Fri Mar 18 17:23:28 2022 : Debug: (0) # Executing group from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (0)   authenticate {
+Fri Mar 18 17:23:28 2022 : Debug: (0)     modsingle[authenticate]: calling eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (0) eap: Peer sent packet with method EAP Identity (1)
+Fri Mar 18 17:23:28 2022 : Debug: (0) eap: Calling submodule eap_md5 to process data
+Fri Mar 18 17:23:28 2022 : Debug: (0) eap_md5: Issuing MD5 Challenge
+Fri Mar 18 17:23:28 2022 : Debug: (0) eap: Sending EAP Request (code 1) ID 126 length 22
+Fri Mar 18 17:23:28 2022 : Debug: (0) eap: EAP session adding &reply:State = 0xc3869b68c3f89f1d
+Fri Mar 18 17:23:28 2022 : Debug: (0)     modsingle[authenticate]: returned from eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (0)     [eap] = handled
+Fri Mar 18 17:23:28 2022 : Debug: (0)   } # authenticate = handled
+Fri Mar 18 17:23:28 2022 : Debug: (0) Using Post-Auth-Type Challenge
+Fri Mar 18 17:23:28 2022 : Debug: (0) # Executing group from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (0)   Challenge { ... } # empty sub-section is ignored
+Fri Mar 18 17:23:28 2022 : Debug: (0) session-state: Nothing to cache
+Fri Mar 18 17:23:28 2022 : Debug: (0) Sent Access-Challenge Id 0 from 127.0.0.1:1812 to 127.0.0.1:52308 length 80
+Fri Mar 18 17:23:28 2022 : Debug: (0)   EAP-Message = 0x017e00160410002a5f9ab01820c8972e385ca8a91cb4
+Fri Mar 18 17:23:28 2022 : Debug: (0)   Message-Authenticator = 0x00000000000000000000000000000000
+Fri Mar 18 17:23:28 2022 : Debug: (0)   State = 0xc3869b68c3f89f1d46b23e058d828ef6
+Fri Mar 18 17:23:28 2022 : Debug: (0) Finished request
+Fri Mar 18 17:23:28 2022 : Debug: Waking up in 4.9 seconds.
+Fri Mar 18 17:23:28 2022 : Debug: (1) Received Access-Request Id 1 from 127.0.0.1:52308 to 127.0.0.1:1812 length 142
+Fri Mar 18 17:23:28 2022 : Debug: (1)   User-Name = "anonymous"
+Fri Mar 18 17:23:28 2022 : Debug: (1)   NAS-IP-Address = 127.0.0.1
+Fri Mar 18 17:23:28 2022 : Debug: (1)   Calling-Station-Id = "02-00-00-00-00-01"
+Fri Mar 18 17:23:28 2022 : Debug: (1)   Framed-MTU = 1400
+Fri Mar 18 17:23:28 2022 : Debug: (1)   NAS-Port-Type = Wireless-802.11
+Fri Mar 18 17:23:28 2022 : Debug: (1)   Service-Type = Framed-User
+Fri Mar 18 17:23:28 2022 : Debug: (1)   Connect-Info = "CONNECT 11Mbps 802.11b"
+Fri Mar 18 17:23:28 2022 : Debug: (1)   EAP-Message = 0x027e00060315
+Fri Mar 18 17:23:28 2022 : Debug: (1)   State = 0xc3869b68c3f89f1d46b23e058d828ef6
+Fri Mar 18 17:23:28 2022 : Debug: (1)   Message-Authenticator = 0xc59319454df1d7f7f48167999c0432e2
+Fri Mar 18 17:23:28 2022 : Debug: (1) session-state: No cached attributes
+Fri Mar 18 17:23:28 2022 : Debug: (1) # Executing section authorize from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (1)   authorize {
+Fri Mar 18 17:23:28 2022 : Debug: (1)     modsingle[authorize]: calling mschap (rlm_mschap)
+Fri Mar 18 17:23:28 2022 : Debug: (1)     modsingle[authorize]: returned from mschap (rlm_mschap)
+Fri Mar 18 17:23:28 2022 : Debug: (1)     [mschap] = noop
+Fri Mar 18 17:23:28 2022 : Debug: (1)     modsingle[authorize]: calling eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (1) eap: Peer sent EAP Response (code 2) ID 126 length 6
+Fri Mar 18 17:23:28 2022 : Debug: (1) eap: No EAP Start, assuming it's an on-going EAP conversation
+Fri Mar 18 17:23:28 2022 : Debug: (1)     modsingle[authorize]: returned from eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (1)     [eap] = updated
+Fri Mar 18 17:23:28 2022 : Debug: (1)     modsingle[authorize]: calling files (rlm_files)
+Fri Mar 18 17:23:28 2022 : Debug: (1)     modsingle[authorize]: returned from files (rlm_files)
+Fri Mar 18 17:23:28 2022 : Debug: (1)     [files] = noop
+Fri Mar 18 17:23:28 2022 : Debug: (1)     modsingle[authorize]: calling pap (rlm_pap)
+Fri Mar 18 17:23:28 2022 : Debug: Not doing PAP as Auth-Type is already set.
+Fri Mar 18 17:23:28 2022 : Debug: (1)     modsingle[authorize]: returned from pap (rlm_pap)
+Fri Mar 18 17:23:28 2022 : Debug: (1)     [pap] = noop
+Fri Mar 18 17:23:28 2022 : Debug: (1)   } # authorize = updated
+Fri Mar 18 17:23:28 2022 : Debug: (1) Found Auth-Type = eap
+Fri Mar 18 17:23:28 2022 : Debug: (1) # Executing group from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (1)   authenticate {
+Fri Mar 18 17:23:28 2022 : Debug: (1)     modsingle[authenticate]: calling eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (1) eap: Expiring EAP session with state 0xc3869b68c3f89f1d
+Fri Mar 18 17:23:28 2022 : Debug: (1) eap: Finished EAP session with state 0xc3869b68c3f89f1d
+Fri Mar 18 17:23:28 2022 : Debug: (1) eap: Previous EAP request found for state 0xc3869b68c3f89f1d, released from the list
+Fri Mar 18 17:23:28 2022 : Debug: (1) eap: Peer sent packet with method EAP NAK (3)
+Fri Mar 18 17:23:28 2022 : Debug: (1) eap: Found mutually acceptable type TTLS (21)
+Fri Mar 18 17:23:28 2022 : Debug: (1) eap: Calling submodule eap_ttls to process data
+Fri Mar 18 17:23:28 2022 : Debug: (1) eap_ttls: (TLS) Initiating new session
+Fri Mar 18 17:23:28 2022 : Debug: (1) eap_ttls: [eaptls start] = request
+Fri Mar 18 17:23:28 2022 : Debug: (1) eap: Sending EAP Request (code 1) ID 127 length 6
+Fri Mar 18 17:23:28 2022 : Debug: (1) eap: EAP session adding &reply:State = 0xc3869b68c2f98e1d
+Fri Mar 18 17:23:28 2022 : Debug: (1)     modsingle[authenticate]: returned from eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (1)     [eap] = handled
+Fri Mar 18 17:23:28 2022 : Debug: (1)   } # authenticate = handled
+Fri Mar 18 17:23:28 2022 : Debug: (1) Using Post-Auth-Type Challenge
+Fri Mar 18 17:23:28 2022 : Debug: (1) # Executing group from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (1)   Challenge { ... } # empty sub-section is ignored
+Fri Mar 18 17:23:28 2022 : Debug: (1) session-state: Saving cached attributes
+Fri Mar 18 17:23:28 2022 : Debug: (1)   Framed-MTU = 994
+Fri Mar 18 17:23:28 2022 : Debug: (1) Sent Access-Challenge Id 1 from 127.0.0.1:1812 to 127.0.0.1:52308 length 64
+Fri Mar 18 17:23:28 2022 : Debug: (1)   EAP-Message = 0x017f00061520
+Fri Mar 18 17:23:28 2022 : Debug: (1)   Message-Authenticator = 0x00000000000000000000000000000000
+Fri Mar 18 17:23:28 2022 : Debug: (1)   State = 0xc3869b68c2f98e1d46b23e058d828ef6
+Fri Mar 18 17:23:28 2022 : Debug: (1) Finished request
+Fri Mar 18 17:23:28 2022 : Debug: Waking up in 4.9 seconds.
+Fri Mar 18 17:23:28 2022 : Debug: (2) Received Access-Request Id 2 from 127.0.0.1:52308 to 127.0.0.1:1812 length 326
+Fri Mar 18 17:23:28 2022 : Debug: (2)   User-Name = "anonymous"
+Fri Mar 18 17:23:28 2022 : Debug: (2)   NAS-IP-Address = 127.0.0.1
+Fri Mar 18 17:23:28 2022 : Debug: (2)   Calling-Station-Id = "02-00-00-00-00-01"
+Fri Mar 18 17:23:28 2022 : Debug: (2)   Framed-MTU = 1400
+Fri Mar 18 17:23:28 2022 : Debug: (2)   NAS-Port-Type = Wireless-802.11
+Fri Mar 18 17:23:28 2022 : Debug: (2)   Service-Type = Framed-User
+Fri Mar 18 17:23:28 2022 : Debug: (2)   Connect-Info = "CONNECT 11Mbps 802.11b"
+Fri Mar 18 17:23:28 2022 : Debug: (2)   EAP-Message = 0x027f00be150016030100b3010000af0303441d1766db07a52cb24a9c4bb5f702ee9f6a11592aaba000f606bfbf358faeb8000038c02cc030009fcca9cca8ccaac02bc02f009ec024c028006bc023c0270067c00ac0140039c009c0130033009d009c003d003c0035002f00ff0100004e000b000403000102000a000c000a001d0017001e001900180016000000170000000d002a0028040305030603080708080809080a080b080408050806040105010601030303010302040205020602
+Fri Mar 18 17:23:28 2022 : Debug: (2)   State = 0xc3869b68c2f98e1d46b23e058d828ef6
+Fri Mar 18 17:23:28 2022 : Debug: (2)   Message-Authenticator = 0xc450bf0f100fb08c2d97939335f4df17
+Fri Mar 18 17:23:28 2022 : Debug: (2) Restoring &session-state
+Fri Mar 18 17:23:28 2022 : Debug: (2)   &session-state:Framed-MTU = 994
+Fri Mar 18 17:23:28 2022 : Debug: (2) # Executing section authorize from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (2)   authorize {
+Fri Mar 18 17:23:28 2022 : Debug: (2)     modsingle[authorize]: calling mschap (rlm_mschap)
+Fri Mar 18 17:23:28 2022 : Debug: (2)     modsingle[authorize]: returned from mschap (rlm_mschap)
+Fri Mar 18 17:23:28 2022 : Debug: (2)     [mschap] = noop
+Fri Mar 18 17:23:28 2022 : Debug: (2)     modsingle[authorize]: calling eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap: Peer sent EAP Response (code 2) ID 127 length 190
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap: Continuing tunnel setup
+Fri Mar 18 17:23:28 2022 : Debug: (2)     modsingle[authorize]: returned from eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (2)     [eap] = ok
+Fri Mar 18 17:23:28 2022 : Debug: (2)   } # authorize = ok
+Fri Mar 18 17:23:28 2022 : Debug: (2) Found Auth-Type = eap
+Fri Mar 18 17:23:28 2022 : Debug: (2) # Executing group from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (2)   authenticate {
+Fri Mar 18 17:23:28 2022 : Debug: (2)     modsingle[authenticate]: calling eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap: Expiring EAP session with state 0xc3869b68c2f98e1d
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap: Finished EAP session with state 0xc3869b68c2f98e1d
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap: Previous EAP request found for state 0xc3869b68c2f98e1d, released from the list
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap: Peer sent packet with method EAP TTLS (21)
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap: Calling submodule eap_ttls to process data
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: Authenticate
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS) EAP Continuing ...
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS) EAP Peer sent flags ---
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS) EAP Verification says ok
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS) EAP Done initial handshake
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS) Handshake state [PINIT] - before SSL initialization (0)
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS) Handshake state [PINIT] - Server before SSL initialization (0)
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:143 cbtls_msg() - here 1 - msg_version=0 (0000) content_type=256 (0x100) buf[0]=0x16 buf[1]=0x3
+Fri Mar 18 17:23:28 2022 : Debug: (TLS) Ignoring cbtls_msg call with pseudo content type 256, version 0
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS) Handshake state [PINIT] - Server before SSL initialization (0)
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:143 cbtls_msg() - here 1 - msg_version=772 (0x304) content_type=22 (0x16) buf[0]=0x1 buf[1]=00
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:152 cbtls_msg() - here 2
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:177 cbtls_msg() - here 4
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:201 cbtls_msg() - here 7 buf[0]=0x1 buf[1]=0
+Fri Mar 18 17:23:28 2022 : Debug: (TLS) Received 179 bytes of TLS data
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        01 00 00 af 03 03 44 1d 17 66 db 07 a5 2c b2 4a
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        9c 4b b5 f7 02 ee 9f 6a 11 59 2a ab a0 00 f6 06
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        bf bf 35 8f ae b8 00 00 38 c0 2c c0 30 00 9f cc
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        a9 cc a8 cc aa c0 2b c0 2f 00 9e c0 24 c0 28 00
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        6b c0 23 c0 27 00 67 c0 0a c0 14 00 39 c0 09 c0
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        13 00 33 00 9d 00 9c 00 3d 00 3c 00 35 00 2f 00
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        ff 01 00 00 4e 00 0b 00 04 03 00 01 02 00 0a 00
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        0c 00 0a 00 1d 00 17 00 1e 00 19 00 18 00 16 00
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        00 00 17 00 00 00 0d 00 2a 00 28 04 03 05 03 06
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        03 08 07 08 08 08 09 08 0a 08 0b 08 04 08 05 08
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        06 04 01 05 01 06 01 03 03 03 01 03 02 04 02 05
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        02 06 02
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:237 cbtls_msg() - here 8
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:243 cbtls_msg() - here 9
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:255 cbtls_msg() - here 11
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:277 cbtls_msg() - here 13
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS) recv TLS 1.3 Handshake, ClientHello
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS) Handshake state [TRCH] - Server SSLv3/TLS read client hello (20)
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: Server preferred ciphers (by priority)
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [0] TLS_AES_256_GCM_SHA384
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [1] TLS_CHACHA20_POLY1305_SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [2] TLS_AES_128_GCM_SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [3] ECDHE-ECDSA-AES256-GCM-SHA384
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [4] ECDHE-RSA-AES256-GCM-SHA384
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [5] DHE-RSA-AES256-GCM-SHA384
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [6] ECDHE-ECDSA-CHACHA20-POLY1305
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [7] ECDHE-RSA-CHACHA20-POLY1305
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [8] DHE-RSA-CHACHA20-POLY1305
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [9] ECDHE-ECDSA-AES128-GCM-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [10] ECDHE-RSA-AES128-GCM-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [11] DHE-RSA-AES128-GCM-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [12] ECDHE-ECDSA-AES256-SHA384
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [13] ECDHE-RSA-AES256-SHA384
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [14] DHE-RSA-AES256-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [15] ECDHE-ECDSA-AES128-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [16] ECDHE-RSA-AES128-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [17] DHE-RSA-AES128-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [18] ECDHE-ECDSA-AES256-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [19] ECDHE-RSA-AES256-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [20] DHE-RSA-AES256-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [21] ECDHE-ECDSA-AES128-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [22] ECDHE-RSA-AES128-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [23] DHE-RSA-AES128-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [24] RSA-PSK-AES256-GCM-SHA384
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [25] DHE-PSK-AES256-GCM-SHA384
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [26] RSA-PSK-CHACHA20-POLY1305
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [27] DHE-PSK-CHACHA20-POLY1305
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [28] ECDHE-PSK-CHACHA20-POLY1305
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [29] AES256-GCM-SHA384
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [30] PSK-AES256-GCM-SHA384
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [31] PSK-CHACHA20-POLY1305
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [32] RSA-PSK-AES128-GCM-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [33] DHE-PSK-AES128-GCM-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [34] AES128-GCM-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [35] PSK-AES128-GCM-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [36] AES256-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [37] AES128-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [38] ECDHE-PSK-AES256-CBC-SHA384
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [39] ECDHE-PSK-AES256-CBC-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [40] SRP-RSA-AES-256-CBC-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [41] SRP-AES-256-CBC-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [42] RSA-PSK-AES256-CBC-SHA384
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [43] DHE-PSK-AES256-CBC-SHA384
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [44] RSA-PSK-AES256-CBC-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [45] DHE-PSK-AES256-CBC-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [46] AES256-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [47] PSK-AES256-CBC-SHA384
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [48] PSK-AES256-CBC-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [49] ECDHE-PSK-AES128-CBC-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [50] ECDHE-PSK-AES128-CBC-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [51] SRP-RSA-AES-128-CBC-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [52] SRP-AES-128-CBC-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [53] RSA-PSK-AES128-CBC-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [54] DHE-PSK-AES128-CBC-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [55] RSA-PSK-AES128-CBC-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [56] DHE-PSK-AES128-CBC-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [57] AES128-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [58] PSK-AES128-CBC-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [59] PSK-AES128-CBC-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: Client preferred ciphers (by priority)
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [0] ECDHE-ECDSA-AES256-GCM-SHA384
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [1] ECDHE-RSA-AES256-GCM-SHA384
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [2] DHE-RSA-AES256-GCM-SHA384
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [3] ECDHE-ECDSA-CHACHA20-POLY1305
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [4] ECDHE-RSA-CHACHA20-POLY1305
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [5] DHE-RSA-CHACHA20-POLY1305
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [6] ECDHE-ECDSA-AES128-GCM-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [7] ECDHE-RSA-AES128-GCM-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [8] DHE-RSA-AES128-GCM-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [9] ECDHE-ECDSA-AES256-SHA384
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [10] ECDHE-RSA-AES256-SHA384
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [11] DHE-RSA-AES256-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [12] ECDHE-ECDSA-AES128-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [13] ECDHE-RSA-AES128-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [14] DHE-RSA-AES128-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [15] ECDHE-ECDSA-AES256-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [16] ECDHE-RSA-AES256-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [17] DHE-RSA-AES256-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [18] ECDHE-ECDSA-AES128-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [19] ECDHE-RSA-AES128-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [20] DHE-RSA-AES128-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [21] AES256-GCM-SHA384
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [22] AES128-GCM-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [23] AES256-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [24] AES128-SHA256
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [25] AES256-SHA
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS)    [26] AES128-SHA
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:143 cbtls_msg() - here 1 - msg_version=0 (0000) content_type=256 (0x100) buf[0]=0x16 buf[1]=0x3
+Fri Mar 18 17:23:28 2022 : Debug: (TLS) Ignoring cbtls_msg call with pseudo content type 256, version 0
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:143 cbtls_msg() - here 1 - msg_version=771 (0x303) content_type=22 (0x16) buf[0]=0x2 buf[1]=00
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:152 cbtls_msg() - here 2
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:177 cbtls_msg() - here 4
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:201 cbtls_msg() - here 7 buf[0]=0x2 buf[1]=0
+Fri Mar 18 17:23:28 2022 : Debug: (TLS) Received 61 bytes of TLS data
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        02 00 00 39 03 03 d2 40 84 d6 8e 53 f0 42 ed be
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        67 3c db 55 5a 33 ae d7 9a 5e 6d 7d 92 84 44 4f
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        57 4e 47 52 44 01 00 c0 30 00 00 11 ff 01 00 01
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        00 00 0b 00 04 03 00 01 02 00 17 00 00
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:237 cbtls_msg() - here 8
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:243 cbtls_msg() - here 9
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:255 cbtls_msg() - here 11
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:277 cbtls_msg() - here 13
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS) send TLS 1.2 Handshake, ServerHello
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS) Handshake state [TWSH] - Server SSLv3/TLS write server hello (22)
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:143 cbtls_msg() - here 1 - msg_version=0 (0000) content_type=256 (0x100) buf[0]=0x16 buf[1]=0x3
+Fri Mar 18 17:23:28 2022 : Debug: (TLS) Ignoring cbtls_msg call with pseudo content type 256, version 0
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:143 cbtls_msg() - here 1 - msg_version=771 (0x303) content_type=22 (0x16) buf[0]=0xb buf[1]=00
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:152 cbtls_msg() - here 2
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:177 cbtls_msg() - here 4
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:201 cbtls_msg() - here 7 buf[0]=0xb buf[1]=0
+Fri Mar 18 17:23:28 2022 : Debug: (TLS) Received 2307 bytes of TLS data
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        0b 00 08 ff 00 08 fc 00 03 f8 30 82 03 f4 30 82
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        02 dc a0 03 02 01 02 02 01 01 30 0d 06 09 2a 86
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        48 86 f7 0d 01 01 0b 05 00 30 81 93 31 0b 30 09
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        06 03 55 04 06 13 02 46 52 31 0f 30 0d 06 03 55
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        04 08 0c 06 52 61 64 69 75 73 31 12 30 10 06 03
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        55 04 07 0c 09 53 6f 6d 65 77 68 65 72 65 31 15
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        30 13 06 03 55 04 0a 0c 0c 45 78 61 6d 70 6c 65
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        20 49 6e 63 2e 31 20 30 1e 06 09 2a 86 48 86 f7
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        0d 01 09 01 16 11 61 64 6d 69 6e 40 65 78 61 6d
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        70 6c 65 2e 6f 72 67 31 26 30 24 06 03 55 04 03
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        0c 1d 45 78 61 6d 70 6c 65 20 43 65 72 74 69 66
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        69 63 61 74 65 20 41 75 74 68 6f 72 69 74 79 30
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        1e 17 0d 32 32 30 33 31 38 31 37 30 36 31 34 5a
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        17 0d 32 32 30 35 31 37 31 37 30 36 31 34 5a 30
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        7c 31 0b 30 09 06 03 55 04 06 13 02 46 52 31 0f
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        30 0d 06 03 55 04 08 0c 06 52 61 64 69 75 73 31
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:237 cbtls_msg() - here 8
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:243 cbtls_msg() - here 9
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:255 cbtls_msg() - here 11
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:277 cbtls_msg() - here 13
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS) send TLS 1.2 Handshake, Certificate
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS) Handshake state [TWSC] - Server SSLv3/TLS write certificate (23)
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:143 cbtls_msg() - here 1 - msg_version=0 (0000) content_type=256 (0x100) buf[0]=0x16 buf[1]=0x3
+Fri Mar 18 17:23:28 2022 : Debug: (TLS) Ignoring cbtls_msg call with pseudo content type 256, version 0
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:143 cbtls_msg() - here 1 - msg_version=771 (0x303) content_type=22 (0x16) buf[0]=0xc buf[1]=00
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:152 cbtls_msg() - here 2
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:177 cbtls_msg() - here 4
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:201 cbtls_msg() - here 7 buf[0]=0xc buf[1]=0
+Fri Mar 18 17:23:28 2022 : Debug: (TLS) Received 300 bytes of TLS data
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        0c 00 01 28 03 00 1d 20 a5 f5 79 17 aa d4 cc 3a
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        3b 7c 9e 1a 32 4d 9d 51 34 dc a8 aa 00 f8 82 1d
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        7d 31 65 80 ed 1c a7 05 08 04 01 00 ba 0b ef ad
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        11 f3 5e fd 19 50 bf 36 32 2a ca 84 6a bc b9 97
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        0a 80 5e d8 6c e1 a5 cd 2a 74 67 d3 b0 4c 25 6f
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        5a ac 81 7a a7 35 bb f7 fa 35 0e c3 2e f9 cf 81
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        03 07 1b 3c 55 e6 fb 4a fc e4 42 96 32 6c 03 41
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        d3 71 13 f5 3f bb 48 90 e5 e8 30 00 5f eb 32 50
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        88 cf 83 51 4a 6c 5e a5 26 f6 a6 76 ef 22 2e 7e
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        47 fd 9e c4 ca 0c 83 5f 8e d0 d2 65 6a 9a 51 72
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        5c 74 df ce db 85 fd d9 a0 9d 94 f7 a6 45 48 30
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        4f 18 34 8d 39 81 0c 93 84 b4 16 6a 01 cd 0e 9c
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        24 e5 21 f9 57 e4 b7 b0 e2 69 69 a6 53 1c bc ea
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        0d 40 ff fe 2a cc 6c 6a 03 6c 61 2e 19 3e 31 17
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        c9 d7 4d cf 18 3b 9b fb 62 8e 6e 33 41 b2 e8 50
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        42 0a af 42 3a 2f 23 a0 bd fc 0e 2d 77 08 c8 f3
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:237 cbtls_msg() - here 8
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:243 cbtls_msg() - here 9
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:255 cbtls_msg() - here 11
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:277 cbtls_msg() - here 13
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS) send TLS 1.2 Handshake, ServerKeyExchange
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS) Handshake state [TWSKE] - Server SSLv3/TLS write key exchange (24)
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:143 cbtls_msg() - here 1 - msg_version=0 (0000) content_type=256 (0x100) buf[0]=0x16 buf[1]=0x3
+Fri Mar 18 17:23:28 2022 : Debug: (TLS) Ignoring cbtls_msg call with pseudo content type 256, version 0
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:143 cbtls_msg() - here 1 - msg_version=771 (0x303) content_type=22 (0x16) buf[0]=0xe buf[1]=00
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:152 cbtls_msg() - here 2
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:177 cbtls_msg() - here 4
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:201 cbtls_msg() - here 7 buf[0]=0xe buf[1]=0
+Fri Mar 18 17:23:28 2022 : Debug: (TLS) Received 4 bytes of TLS data
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        0e 00 00 00
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:237 cbtls_msg() - here 8
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:243 cbtls_msg() - here 9
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:255 cbtls_msg() - here 11
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:277 cbtls_msg() - here 13
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS) send TLS 1.2 Handshake, ServerHelloDone
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS) Handshake state [TWSD] - Server SSLv3/TLS write server done (26)
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS) Server : Need to read more data: SSLv3/TLS write server done
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS) In Handshake Phase
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: (TLS) got 2692 bytes of data
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap_ttls: [eaptls process] = handled
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap: Sending EAP Request (code 1) ID 128 length 1004
+Fri Mar 18 17:23:28 2022 : Debug: (2) eap: EAP session adding &reply:State = 0xc3869b68c1068e1d
+Fri Mar 18 17:23:28 2022 : Debug: (2)     modsingle[authenticate]: returned from eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (2)     [eap] = handled
+Fri Mar 18 17:23:28 2022 : Debug: (2)   } # authenticate = handled
+Fri Mar 18 17:23:28 2022 : Debug: (2) Using Post-Auth-Type Challenge
+Fri Mar 18 17:23:28 2022 : Debug: (2) # Executing group from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (2)   Challenge { ... } # empty sub-section is ignored
+Fri Mar 18 17:23:28 2022 : Debug: (2) session-state: Saving cached attributes
+Fri Mar 18 17:23:28 2022 : Debug: (2)   Framed-MTU = 994
+Fri Mar 18 17:23:28 2022 : Debug: (2)   TLS-Session-Information = "(TLS) recv TLS 1.3 Handshake, ClientHello"
+Fri Mar 18 17:23:28 2022 : Debug: (2)   TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerHello"
+Fri Mar 18 17:23:28 2022 : Debug: (2)   TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, Certificate"
+Fri Mar 18 17:23:28 2022 : Debug: (2)   TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerKeyExchange"
+Fri Mar 18 17:23:28 2022 : Debug: (2)   TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerHelloDone"
+Fri Mar 18 17:23:28 2022 : Debug: (2) Sent Access-Challenge Id 2 from 127.0.0.1:1812 to 127.0.0.1:52308 length 1068
+Fri Mar 18 17:23:28 2022 : Debug: (2)   EAP-Message = 0x018003ec15c000000a84160303003d020000390303d24084d68e53f042edbe673cdb555a33aed79a5e6d7d9284444f574e4752440100c030000011ff01000100000b0004030001020017000016030309030b0008ff0008fc0003f8308203f4308202dca003020102020101300d06092a864886f70d01010b0500308193310b3009060355040613024652310f300d06035504080c065261646975733112301006035504070c09536f6d65776865726531153013060355040a0c0c4578616d706c6520496e632e3120301e06092a864886f70d010901161161646d696e406578616d706c652e6f72673126302406035504030c1d4578616d706c6520436572746966696361746520417574686f72697479301e170d3232303331383137303631345a170d3232303531373137303631345a307c310b3009060355040613024652310f300d06035504080c0652616469757331153013060355040a0c0c4578616d706c6520496e632e3123302106035504030c1a4578616d70
+Fri Mar 18 17:23:28 2022 : Debug: (2)   Message-Authenticator = 0x00000000000000000000000000000000
+Fri Mar 18 17:23:28 2022 : Debug: (2)   State = 0xc3869b68c1068e1d46b23e058d828ef6
+Fri Mar 18 17:23:28 2022 : Debug: (2) Finished request
+Fri Mar 18 17:23:28 2022 : Debug: Waking up in 4.9 seconds.
+Fri Mar 18 17:23:28 2022 : Debug: (3) Received Access-Request Id 3 from 127.0.0.1:52308 to 127.0.0.1:1812 length 142
+Fri Mar 18 17:23:28 2022 : Debug: (3)   User-Name = "anonymous"
+Fri Mar 18 17:23:28 2022 : Debug: (3)   NAS-IP-Address = 127.0.0.1
+Fri Mar 18 17:23:28 2022 : Debug: (3)   Calling-Station-Id = "02-00-00-00-00-01"
+Fri Mar 18 17:23:28 2022 : Debug: (3)   Framed-MTU = 1400
+Fri Mar 18 17:23:28 2022 : Debug: (3)   NAS-Port-Type = Wireless-802.11
+Fri Mar 18 17:23:28 2022 : Debug: (3)   Service-Type = Framed-User
+Fri Mar 18 17:23:28 2022 : Debug: (3)   Connect-Info = "CONNECT 11Mbps 802.11b"
+Fri Mar 18 17:23:28 2022 : Debug: (3)   EAP-Message = 0x028000061500
+Fri Mar 18 17:23:28 2022 : Debug: (3)   State = 0xc3869b68c1068e1d46b23e058d828ef6
+Fri Mar 18 17:23:28 2022 : Debug: (3)   Message-Authenticator = 0x5156d7d768389f96a49c581ccc98baf0
+Fri Mar 18 17:23:28 2022 : Debug: (3) Restoring &session-state
+Fri Mar 18 17:23:28 2022 : Debug: (3)   &session-state:Framed-MTU = 994
+Fri Mar 18 17:23:28 2022 : Debug: (3)   &session-state:TLS-Session-Information = "(TLS) recv TLS 1.3 Handshake, ClientHello"
+Fri Mar 18 17:23:28 2022 : Debug: (3)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerHello"
+Fri Mar 18 17:23:28 2022 : Debug: (3)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, Certificate"
+Fri Mar 18 17:23:28 2022 : Debug: (3)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerKeyExchange"
+Fri Mar 18 17:23:28 2022 : Debug: (3)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerHelloDone"
+Fri Mar 18 17:23:28 2022 : Debug: (3) # Executing section authorize from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (3)   authorize {
+Fri Mar 18 17:23:28 2022 : Debug: (3)     modsingle[authorize]: calling mschap (rlm_mschap)
+Fri Mar 18 17:23:28 2022 : Debug: (3)     modsingle[authorize]: returned from mschap (rlm_mschap)
+Fri Mar 18 17:23:28 2022 : Debug: (3)     [mschap] = noop
+Fri Mar 18 17:23:28 2022 : Debug: (3)     modsingle[authorize]: calling eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (3) eap: Peer sent EAP Response (code 2) ID 128 length 6
+Fri Mar 18 17:23:28 2022 : Debug: (3) eap: Continuing tunnel setup
+Fri Mar 18 17:23:28 2022 : Debug: (3)     modsingle[authorize]: returned from eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (3)     [eap] = ok
+Fri Mar 18 17:23:28 2022 : Debug: (3)   } # authorize = ok
+Fri Mar 18 17:23:28 2022 : Debug: (3) Found Auth-Type = eap
+Fri Mar 18 17:23:28 2022 : Debug: (3) # Executing group from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (3)   authenticate {
+Fri Mar 18 17:23:28 2022 : Debug: (3)     modsingle[authenticate]: calling eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (3) eap: Expiring EAP session with state 0xc3869b68c1068e1d
+Fri Mar 18 17:23:28 2022 : Debug: (3) eap: Finished EAP session with state 0xc3869b68c1068e1d
+Fri Mar 18 17:23:28 2022 : Debug: (3) eap: Previous EAP request found for state 0xc3869b68c1068e1d, released from the list
+Fri Mar 18 17:23:28 2022 : Debug: (3) eap: Peer sent packet with method EAP TTLS (21)
+Fri Mar 18 17:23:28 2022 : Debug: (3) eap: Calling submodule eap_ttls to process data
+Fri Mar 18 17:23:28 2022 : Debug: (3) eap_ttls: Authenticate
+Fri Mar 18 17:23:28 2022 : Debug: (3) eap_ttls: (TLS) EAP Continuing ...
+Fri Mar 18 17:23:28 2022 : Debug: (3) eap_ttls: (TLS) EAP Peer sent flags ---
+Fri Mar 18 17:23:28 2022 : Debug: (3) eap_ttls: (TLS) Peer ACKed our handshake fragment
+Fri Mar 18 17:23:28 2022 : Debug: (3) eap_ttls: (TLS) EAP Verification says request
+Fri Mar 18 17:23:28 2022 : Debug: (3) eap_ttls: [eaptls process] = handled
+Fri Mar 18 17:23:28 2022 : Debug: (3) eap: Sending EAP Request (code 1) ID 129 length 1004
+Fri Mar 18 17:23:28 2022 : Debug: (3) eap: EAP session adding &reply:State = 0xc3869b68c0078e1d
+Fri Mar 18 17:23:28 2022 : Debug: (3)     modsingle[authenticate]: returned from eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (3)     [eap] = handled
+Fri Mar 18 17:23:28 2022 : Debug: (3)   } # authenticate = handled
+Fri Mar 18 17:23:28 2022 : Debug: (3) Using Post-Auth-Type Challenge
+Fri Mar 18 17:23:28 2022 : Debug: (3) # Executing group from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (3)   Challenge { ... } # empty sub-section is ignored
+Fri Mar 18 17:23:28 2022 : Debug: (3) session-state: Saving cached attributes
+Fri Mar 18 17:23:28 2022 : Debug: (3)   Framed-MTU = 994
+Fri Mar 18 17:23:28 2022 : Debug: (3)   TLS-Session-Information = "(TLS) recv TLS 1.3 Handshake, ClientHello"
+Fri Mar 18 17:23:28 2022 : Debug: (3)   TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerHello"
+Fri Mar 18 17:23:28 2022 : Debug: (3)   TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, Certificate"
+Fri Mar 18 17:23:28 2022 : Debug: (3)   TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerKeyExchange"
+Fri Mar 18 17:23:28 2022 : Debug: (3)   TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerHelloDone"
+Fri Mar 18 17:23:28 2022 : Debug: (3) Sent Access-Challenge Id 3 from 127.0.0.1:1812 to 127.0.0.1:52308 length 1068
+Fri Mar 18 17:23:28 2022 : Debug: (3)   EAP-Message = 0x018103ec15c000000a84e6f07012ec80865b2dde25999309ccfb67d341f3cf5e0b176efd72e8e659112da4a3ab9d139656e9bf905a853252baa9ae9c9b68976784e57a9c78cedcaa7c966f47566abf4de2eeab439a62dfa164b7e63fa5b187978661b6c49fe80b135264b41a4000edee200004fe308204fa308203e2a00302010202143cf934d3b38c04dea31fde7c2eb58d9a3b8361b1300d06092a864886f70d01010b0500308193310b3009060355040613024652310f300d06035504080c065261646975733112301006035504070c09536f6d65776865726531153013060355040a0c0c4578616d706c6520496e632e3120301e06092a864886f70d010901161161646d696e406578616d706c652e6f72673126302406035504030c1d4578616d706c6520436572746966696361746520417574686f72697479301e170d3232303331383137303631345a170d3232303531373137303631345a308193310b3009060355040613024652310f300d06035504080c06
+Fri Mar 18 17:23:28 2022 : Debug: (3)   Message-Authenticator = 0x00000000000000000000000000000000
+Fri Mar 18 17:23:28 2022 : Debug: (3)   State = 0xc3869b68c0078e1d46b23e058d828ef6
+Fri Mar 18 17:23:28 2022 : Debug: (3) Finished request
+Fri Mar 18 17:23:28 2022 : Debug: Waking up in 4.9 seconds.
+Fri Mar 18 17:23:28 2022 : Debug: (4) Received Access-Request Id 4 from 127.0.0.1:52308 to 127.0.0.1:1812 length 142
+Fri Mar 18 17:23:28 2022 : Debug: (4)   User-Name = "anonymous"
+Fri Mar 18 17:23:28 2022 : Debug: (4)   NAS-IP-Address = 127.0.0.1
+Fri Mar 18 17:23:28 2022 : Debug: (4)   Calling-Station-Id = "02-00-00-00-00-01"
+Fri Mar 18 17:23:28 2022 : Debug: (4)   Framed-MTU = 1400
+Fri Mar 18 17:23:28 2022 : Debug: (4)   NAS-Port-Type = Wireless-802.11
+Fri Mar 18 17:23:28 2022 : Debug: (4)   Service-Type = Framed-User
+Fri Mar 18 17:23:28 2022 : Debug: (4)   Connect-Info = "CONNECT 11Mbps 802.11b"
+Fri Mar 18 17:23:28 2022 : Debug: (4)   EAP-Message = 0x028100061500
+Fri Mar 18 17:23:28 2022 : Debug: (4)   State = 0xc3869b68c0078e1d46b23e058d828ef6
+Fri Mar 18 17:23:28 2022 : Debug: (4)   Message-Authenticator = 0x3a28e74208cc4cf868a323e23e5fbb41
+Fri Mar 18 17:23:28 2022 : Debug: (4) Restoring &session-state
+Fri Mar 18 17:23:28 2022 : Debug: (4)   &session-state:Framed-MTU = 994
+Fri Mar 18 17:23:28 2022 : Debug: (4)   &session-state:TLS-Session-Information = "(TLS) recv TLS 1.3 Handshake, ClientHello"
+Fri Mar 18 17:23:28 2022 : Debug: (4)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerHello"
+Fri Mar 18 17:23:28 2022 : Debug: (4)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, Certificate"
+Fri Mar 18 17:23:28 2022 : Debug: (4)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerKeyExchange"
+Fri Mar 18 17:23:28 2022 : Debug: (4)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerHelloDone"
+Fri Mar 18 17:23:28 2022 : Debug: (4) # Executing section authorize from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (4)   authorize {
+Fri Mar 18 17:23:28 2022 : Debug: (4)     modsingle[authorize]: calling mschap (rlm_mschap)
+Fri Mar 18 17:23:28 2022 : Debug: (4)     modsingle[authorize]: returned from mschap (rlm_mschap)
+Fri Mar 18 17:23:28 2022 : Debug: (4)     [mschap] = noop
+Fri Mar 18 17:23:28 2022 : Debug: (4)     modsingle[authorize]: calling eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (4) eap: Peer sent EAP Response (code 2) ID 129 length 6
+Fri Mar 18 17:23:28 2022 : Debug: (4) eap: Continuing tunnel setup
+Fri Mar 18 17:23:28 2022 : Debug: (4)     modsingle[authorize]: returned from eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (4)     [eap] = ok
+Fri Mar 18 17:23:28 2022 : Debug: (4)   } # authorize = ok
+Fri Mar 18 17:23:28 2022 : Debug: (4) Found Auth-Type = eap
+Fri Mar 18 17:23:28 2022 : Debug: (4) # Executing group from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (4)   authenticate {
+Fri Mar 18 17:23:28 2022 : Debug: (4)     modsingle[authenticate]: calling eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (4) eap: Expiring EAP session with state 0xc3869b68c0078e1d
+Fri Mar 18 17:23:28 2022 : Debug: (4) eap: Finished EAP session with state 0xc3869b68c0078e1d
+Fri Mar 18 17:23:28 2022 : Debug: (4) eap: Previous EAP request found for state 0xc3869b68c0078e1d, released from the list
+Fri Mar 18 17:23:28 2022 : Debug: (4) eap: Peer sent packet with method EAP TTLS (21)
+Fri Mar 18 17:23:28 2022 : Debug: (4) eap: Calling submodule eap_ttls to process data
+Fri Mar 18 17:23:28 2022 : Debug: (4) eap_ttls: Authenticate
+Fri Mar 18 17:23:28 2022 : Debug: (4) eap_ttls: (TLS) EAP Continuing ...
+Fri Mar 18 17:23:28 2022 : Debug: (4) eap_ttls: (TLS) EAP Peer sent flags ---
+Fri Mar 18 17:23:28 2022 : Debug: (4) eap_ttls: (TLS) Peer ACKed our handshake fragment
+Fri Mar 18 17:23:28 2022 : Debug: (4) eap_ttls: (TLS) EAP Verification says request
+Fri Mar 18 17:23:28 2022 : Debug: (4) eap_ttls: [eaptls process] = handled
+Fri Mar 18 17:23:28 2022 : Debug: (4) eap: Sending EAP Request (code 1) ID 130 length 714
+Fri Mar 18 17:23:28 2022 : Debug: (4) eap: EAP session adding &reply:State = 0xc3869b68c7048e1d
+Fri Mar 18 17:23:28 2022 : Debug: (4)     modsingle[authenticate]: returned from eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (4)     [eap] = handled
+Fri Mar 18 17:23:28 2022 : Debug: (4)   } # authenticate = handled
+Fri Mar 18 17:23:28 2022 : Debug: (4) Using Post-Auth-Type Challenge
+Fri Mar 18 17:23:28 2022 : Debug: (4) # Executing group from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (4)   Challenge { ... } # empty sub-section is ignored
+Fri Mar 18 17:23:28 2022 : Debug: (4) session-state: Saving cached attributes
+Fri Mar 18 17:23:28 2022 : Debug: (4)   Framed-MTU = 994
+Fri Mar 18 17:23:28 2022 : Debug: (4)   TLS-Session-Information = "(TLS) recv TLS 1.3 Handshake, ClientHello"
+Fri Mar 18 17:23:28 2022 : Debug: (4)   TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerHello"
+Fri Mar 18 17:23:28 2022 : Debug: (4)   TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, Certificate"
+Fri Mar 18 17:23:28 2022 : Debug: (4)   TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerKeyExchange"
+Fri Mar 18 17:23:28 2022 : Debug: (4)   TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerHelloDone"
+Fri Mar 18 17:23:28 2022 : Debug: (4) Sent Access-Challenge Id 4 from 127.0.0.1:1812 to 127.0.0.1:52308 length 776
+Fri Mar 18 17:23:28 2022 : Debug: (4)   EAP-Message = 0x018202ca158000000a8472746966696361746520417574686f7269747982143cf934d3b38c04dea31fde7c2eb58d9a3b8361b1300f0603551d130101ff040530030101ff30360603551d1f042f302d302ba029a0278625687474703a2f2f7777772e6578616d706c652e6f72672f6578616d706c655f63612e63726c300d06092a864886f70d01010b05000382010100a3136558ec5e60e1e6093606bde1767b78b4fcf2c46d1f591ffde1480616140e5a51c9e1550024dba43241f53f26a8bb1d8fb3059339343c906366fe8c569fd999f8a9d5a521c05ca3cadc7c03bc6ece008569a1313d5fe268d5f873770f9f6b719a868d2bc529181b78581c79663ad643b76879fe3762e19f1e39d160acea7445d86c1090ab89ff72945c8e325eaec4bdb199520caabba21d560a3edc902a4d119b7ab61c317c3891ba34be03f3bbd3bf36cb6b6dde53eabffba9a5af880212de41b2fdd4cde3c11af0ad83722f803ba16297f18d8afd58a89a79203905d2f059bd5b82ec714e
+Fri Mar 18 17:23:28 2022 : Debug: (4)   Message-Authenticator = 0x00000000000000000000000000000000
+Fri Mar 18 17:23:28 2022 : Debug: (4)   State = 0xc3869b68c7048e1d46b23e058d828ef6
+Fri Mar 18 17:23:28 2022 : Debug: (4) Finished request
+Fri Mar 18 17:23:28 2022 : Debug: Waking up in 4.9 seconds.
+Fri Mar 18 17:23:28 2022 : Debug: (5) Received Access-Request Id 5 from 127.0.0.1:52308 to 127.0.0.1:1812 length 235
+Fri Mar 18 17:23:28 2022 : Debug: (5)   User-Name = "anonymous"
+Fri Mar 18 17:23:28 2022 : Debug: (5)   NAS-IP-Address = 127.0.0.1
+Fri Mar 18 17:23:28 2022 : Debug: (5)   Calling-Station-Id = "02-00-00-00-00-01"
+Fri Mar 18 17:23:28 2022 : Debug: (5)   Framed-MTU = 1400
+Fri Mar 18 17:23:28 2022 : Debug: (5)   NAS-Port-Type = Wireless-802.11
+Fri Mar 18 17:23:28 2022 : Debug: (5)   Service-Type = Framed-User
+Fri Mar 18 17:23:28 2022 : Debug: (5)   Connect-Info = "CONNECT 11Mbps 802.11b"
+Fri Mar 18 17:23:28 2022 : Debug: (5)   EAP-Message = 0x0282006315001603030025100000212032bdf69abef8151f35e29137b893dbd6727a3aec803619b132c9d7510dfb282b1403030001011603030028ab8cb07c742102cfa0ff7438123c34f787475924d3f60ed17920de5164e28b974b036318b19dc865
+Fri Mar 18 17:23:28 2022 : Debug: (5)   State = 0xc3869b68c7048e1d46b23e058d828ef6
+Fri Mar 18 17:23:28 2022 : Debug: (5)   Message-Authenticator = 0x3f798712c20b9472f339858dc50bd9a0
+Fri Mar 18 17:23:28 2022 : Debug: (5) Restoring &session-state
+Fri Mar 18 17:23:28 2022 : Debug: (5)   &session-state:Framed-MTU = 994
+Fri Mar 18 17:23:28 2022 : Debug: (5)   &session-state:TLS-Session-Information = "(TLS) recv TLS 1.3 Handshake, ClientHello"
+Fri Mar 18 17:23:28 2022 : Debug: (5)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerHello"
+Fri Mar 18 17:23:28 2022 : Debug: (5)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, Certificate"
+Fri Mar 18 17:23:28 2022 : Debug: (5)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerKeyExchange"
+Fri Mar 18 17:23:28 2022 : Debug: (5)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerHelloDone"
+Fri Mar 18 17:23:28 2022 : Debug: (5) # Executing section authorize from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (5)   authorize {
+Fri Mar 18 17:23:28 2022 : Debug: (5)     modsingle[authorize]: calling mschap (rlm_mschap)
+Fri Mar 18 17:23:28 2022 : Debug: (5)     modsingle[authorize]: returned from mschap (rlm_mschap)
+Fri Mar 18 17:23:28 2022 : Debug: (5)     [mschap] = noop
+Fri Mar 18 17:23:28 2022 : Debug: (5)     modsingle[authorize]: calling eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap: Peer sent EAP Response (code 2) ID 130 length 99
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap: Continuing tunnel setup
+Fri Mar 18 17:23:28 2022 : Debug: (5)     modsingle[authorize]: returned from eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (5)     [eap] = ok
+Fri Mar 18 17:23:28 2022 : Debug: (5)   } # authorize = ok
+Fri Mar 18 17:23:28 2022 : Debug: (5) Found Auth-Type = eap
+Fri Mar 18 17:23:28 2022 : Debug: (5) # Executing group from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (5)   authenticate {
+Fri Mar 18 17:23:28 2022 : Debug: (5)     modsingle[authenticate]: calling eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap: Expiring EAP session with state 0xc3869b68c7048e1d
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap: Finished EAP session with state 0xc3869b68c7048e1d
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap: Previous EAP request found for state 0xc3869b68c7048e1d, released from the list
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap: Peer sent packet with method EAP TTLS (21)
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap: Calling submodule eap_ttls to process data
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap_ttls: Authenticate
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap_ttls: (TLS) EAP Continuing ...
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap_ttls: (TLS) EAP Peer sent flags ---
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap_ttls: (TLS) EAP Verification says ok
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap_ttls: (TLS) EAP Done initial handshake
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:143 cbtls_msg() - here 1 - msg_version=0 (0000) content_type=256 (0x100) buf[0]=0x16 buf[1]=0x3
+Fri Mar 18 17:23:28 2022 : Debug: (TLS) Ignoring cbtls_msg call with pseudo content type 256, version 0
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap_ttls: (TLS) Handshake state [TWSD] - Server SSLv3/TLS write server done (26)
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:143 cbtls_msg() - here 1 - msg_version=771 (0x303) content_type=22 (0x16) buf[0]=0x10 buf[1]=00
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:152 cbtls_msg() - here 2
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:177 cbtls_msg() - here 4
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:201 cbtls_msg() - here 7 buf[0]=0x10 buf[1]=0
+Fri Mar 18 17:23:28 2022 : Debug: (TLS) Received 37 bytes of TLS data
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        10 00 00 21 20 32 bd f6 9a be f8 15 1f 35 e2 91
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        37 b8 93 db d6 72 7a 3a ec 80 36 19 b1 32 c9 d7
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        51 0d fb 28 2b
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:237 cbtls_msg() - here 8
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:243 cbtls_msg() - here 9
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:255 cbtls_msg() - here 11
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:277 cbtls_msg() - here 13
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap_ttls: (TLS) recv TLS 1.2 Handshake, ClientKeyExchange
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:143 cbtls_msg() - here 1 - msg_version=0 (0000) content_type=256 (0x100) buf[0]=0x14 buf[1]=0x3
+Fri Mar 18 17:23:28 2022 : Debug: (TLS) Ignoring cbtls_msg call with pseudo content type 256, version 0
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap_ttls: (TLS) Handshake state [TRCKE] - Server SSLv3/TLS read client key exchange (28)
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:143 cbtls_msg() - here 1 - msg_version=0 (0000) content_type=256 (0x100) buf[0]=0x16 buf[1]=0x3
+Fri Mar 18 17:23:28 2022 : Debug: (TLS) Ignoring cbtls_msg call with pseudo content type 256, version 0
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap_ttls: (TLS) Handshake state [TRCCS] - Server SSLv3/TLS read change cipher spec (31)
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:143 cbtls_msg() - here 1 - msg_version=771 (0x303) content_type=22 (0x16) buf[0]=0x14 buf[1]=00
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:152 cbtls_msg() - here 2
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:177 cbtls_msg() - here 4
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:201 cbtls_msg() - here 7 buf[0]=0x14 buf[1]=0
+Fri Mar 18 17:23:28 2022 : Debug: (TLS) Received 16 bytes of TLS data
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        14 00 00 0c b0 88 e0 9d 9b 1b 4b 0c 80 e3 0f 6f
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:237 cbtls_msg() - here 8
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:243 cbtls_msg() - here 9
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:255 cbtls_msg() - here 11
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:277 cbtls_msg() - here 13
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap_ttls: (TLS) recv TLS 1.2 Handshake, Finished
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap_ttls: (TLS) Handshake state [TRFIN] - Server SSLv3/TLS read finished (32)
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:143 cbtls_msg() - here 1 - msg_version=0 (0000) content_type=256 (0x100) buf[0]=0x14 buf[1]=0x3
+Fri Mar 18 17:23:28 2022 : Debug: (TLS) Ignoring cbtls_msg call with pseudo content type 256, version 0
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:143 cbtls_msg() - here 1 - msg_version=771 (0x303) content_type=20 (0x14) buf[0]=0x1 buf[1]=00
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:152 cbtls_msg() - here 2
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:177 cbtls_msg() - here 4
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:201 cbtls_msg() - here 7 buf[0]=0x1 buf[1]=0
+Fri Mar 18 17:23:28 2022 : Debug: (TLS) Received 1 bytes of TLS data
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        01
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:237 cbtls_msg() - here 8
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:243 cbtls_msg() - here 9
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:277 cbtls_msg() - here 13
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap_ttls: (TLS) send TLS 1.2 ChangeCipherSpec
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap_ttls: (TLS) Handshake state [TWCCS] - Server SSLv3/TLS write change cipher spec (35)
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:143 cbtls_msg() - here 1 - msg_version=0 (0000) content_type=256 (0x100) buf[0]=0x16 buf[1]=0x3
+Fri Mar 18 17:23:28 2022 : Debug: (TLS) Ignoring cbtls_msg call with pseudo content type 256, version 0
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:143 cbtls_msg() - here 1 - msg_version=771 (0x303) content_type=22 (0x16) buf[0]=0x14 buf[1]=00
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:152 cbtls_msg() - here 2
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:177 cbtls_msg() - here 4
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:201 cbtls_msg() - here 7 buf[0]=0x14 buf[1]=0
+Fri Mar 18 17:23:28 2022 : Debug: (TLS) Received 16 bytes of TLS data
+Fri Mar 18 17:23:28 2022 : Debug: (TLS)        14 00 00 0c 40 44 76 b9 39 4b a9 d0 58 5d 3d 67
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:237 cbtls_msg() - here 8
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:243 cbtls_msg() - here 9
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:255 cbtls_msg() - here 11
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:277 cbtls_msg() - here 13
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap_ttls: (TLS) send TLS 1.2 Handshake, Finished
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap_ttls: (TLS) Handshake state [TWFIN] - Server SSLv3/TLS write finished (36)
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap_ttls: (TLS) Handshake state [SSLOK] - SSL negotiation finished successfully (1)
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap_ttls: (TLS) Connection Established
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap_ttls:   TLS-Session-Cipher-Suite = "ECDHE-RSA-AES256-GCM-SHA384"
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap_ttls:   TLS-Session-Version = "TLS 1.2"
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap_ttls: (TLS) got 51 bytes of data
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap_ttls: [eaptls process] = handled
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap: Sending EAP Request (code 1) ID 131 length 61
+Fri Mar 18 17:23:28 2022 : Debug: (5) eap: EAP session adding &reply:State = 0xc3869b68c6058e1d
+Fri Mar 18 17:23:28 2022 : Debug: (5)     modsingle[authenticate]: returned from eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (5)     [eap] = handled
+Fri Mar 18 17:23:28 2022 : Debug: (5)   } # authenticate = handled
+Fri Mar 18 17:23:28 2022 : Debug: (5) Using Post-Auth-Type Challenge
+Fri Mar 18 17:23:28 2022 : Debug: (5) # Executing group from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (5)   Challenge { ... } # empty sub-section is ignored
+Fri Mar 18 17:23:28 2022 : Debug: (5) session-state: Saving cached attributes
+Fri Mar 18 17:23:28 2022 : Debug: (5)   Framed-MTU = 994
+Fri Mar 18 17:23:28 2022 : Debug: (5)   TLS-Session-Information = "(TLS) recv TLS 1.3 Handshake, ClientHello"
+Fri Mar 18 17:23:28 2022 : Debug: (5)   TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerHello"
+Fri Mar 18 17:23:28 2022 : Debug: (5)   TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, Certificate"
+Fri Mar 18 17:23:28 2022 : Debug: (5)   TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerKeyExchange"
+Fri Mar 18 17:23:28 2022 : Debug: (5)   TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerHelloDone"
+Fri Mar 18 17:23:28 2022 : Debug: (5)   TLS-Session-Information = "(TLS) recv TLS 1.2 Handshake, ClientKeyExchange"
+Fri Mar 18 17:23:28 2022 : Debug: (5)   TLS-Session-Information = "(TLS) recv TLS 1.2 Handshake, Finished"
+Fri Mar 18 17:23:28 2022 : Debug: (5)   TLS-Session-Information = "(TLS) send TLS 1.2 ChangeCipherSpec"
+Fri Mar 18 17:23:28 2022 : Debug: (5)   TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, Finished"
+Fri Mar 18 17:23:28 2022 : Debug: (5)   TLS-Session-Cipher-Suite = "ECDHE-RSA-AES256-GCM-SHA384"
+Fri Mar 18 17:23:28 2022 : Debug: (5)   TLS-Session-Version = "TLS 1.2"
+Fri Mar 18 17:23:28 2022 : Debug: (5) Sent Access-Challenge Id 5 from 127.0.0.1:1812 to 127.0.0.1:52308 length 119
+Fri Mar 18 17:23:28 2022 : Debug: (5)   EAP-Message = 0x0183003d15800000003314030300010116030300284ff18f3f3bcf12bf241bf33f715314b775607e2e53d55a65e6174f87ac68c03f9edf442ea27cd6ba
+Fri Mar 18 17:23:28 2022 : Debug: (5)   Message-Authenticator = 0x00000000000000000000000000000000
+Fri Mar 18 17:23:28 2022 : Debug: (5)   State = 0xc3869b68c6058e1d46b23e058d828ef6
+Fri Mar 18 17:23:28 2022 : Debug: (5) Finished request
+Fri Mar 18 17:23:28 2022 : Debug: Waking up in 4.9 seconds.
+Fri Mar 18 17:23:28 2022 : Debug: (6) Received Access-Request Id 6 from 127.0.0.1:52308 to 127.0.0.1:1812 length 275
+Fri Mar 18 17:23:28 2022 : Debug: (6)   User-Name = "anonymous"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   NAS-IP-Address = 127.0.0.1
+Fri Mar 18 17:23:28 2022 : Debug: (6)   Calling-Station-Id = "02-00-00-00-00-01"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   Framed-MTU = 1400
+Fri Mar 18 17:23:28 2022 : Debug: (6)   NAS-Port-Type = Wireless-802.11
+Fri Mar 18 17:23:28 2022 : Debug: (6)   Service-Type = Framed-User
+Fri Mar 18 17:23:28 2022 : Debug: (6)   Connect-Info = "CONNECT 11Mbps 802.11b"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   EAP-Message = 0x0283008b15001703030080ab8cb07c742102d0c067e4da6ca652b7d5fde30b01904dba72b823f02a04a1acbb689cc8a2f418872c3b3913d8159d22954c966e3b65061de662ecac5f25e195244e78720a9d4ed53e8caf46c46e168d4faffc0f5b618afcda41bbbd258ac959406a66ddd2cfedfa13771092e876ea9fcd1919029b971be9acbed71b2abfbc03
+Fri Mar 18 17:23:28 2022 : Debug: (6)   State = 0xc3869b68c6058e1d46b23e058d828ef6
+Fri Mar 18 17:23:28 2022 : Debug: (6)   Message-Authenticator = 0x1c567ca5fafdb326cf97118064ccd72e
+Fri Mar 18 17:23:28 2022 : Debug: (6) Restoring &session-state
+Fri Mar 18 17:23:28 2022 : Debug: (6)   &session-state:Framed-MTU = 994
+Fri Mar 18 17:23:28 2022 : Debug: (6)   &session-state:TLS-Session-Information = "(TLS) recv TLS 1.3 Handshake, ClientHello"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerHello"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, Certificate"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerKeyExchange"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerHelloDone"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   &session-state:TLS-Session-Information = "(TLS) recv TLS 1.2 Handshake, ClientKeyExchange"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   &session-state:TLS-Session-Information = "(TLS) recv TLS 1.2 Handshake, Finished"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 ChangeCipherSpec"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, Finished"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   &session-state:TLS-Session-Cipher-Suite = "ECDHE-RSA-AES256-GCM-SHA384"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   &session-state:TLS-Session-Version = "TLS 1.2"
+Fri Mar 18 17:23:28 2022 : Debug: (6) # Executing section authorize from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (6)   authorize {
+Fri Mar 18 17:23:28 2022 : Debug: (6)     modsingle[authorize]: calling mschap (rlm_mschap)
+Fri Mar 18 17:23:28 2022 : Debug: (6)     modsingle[authorize]: returned from mschap (rlm_mschap)
+Fri Mar 18 17:23:28 2022 : Debug: (6)     [mschap] = noop
+Fri Mar 18 17:23:28 2022 : Debug: (6)     modsingle[authorize]: calling eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap: Peer sent EAP Response (code 2) ID 131 length 139
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap: Continuing tunnel setup
+Fri Mar 18 17:23:28 2022 : Debug: (6)     modsingle[authorize]: returned from eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (6)     [eap] = ok
+Fri Mar 18 17:23:28 2022 : Debug: (6)   } # authorize = ok
+Fri Mar 18 17:23:28 2022 : Debug: (6) Found Auth-Type = eap
+Fri Mar 18 17:23:28 2022 : Debug: (6) # Executing group from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (6)   authenticate {
+Fri Mar 18 17:23:28 2022 : Debug: (6)     modsingle[authenticate]: calling eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap: Expiring EAP session with state 0xc3869b68c6058e1d
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap: Finished EAP session with state 0xc3869b68c6058e1d
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap: Previous EAP request found for state 0xc3869b68c6058e1d, released from the list
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap: Peer sent packet with method EAP TTLS (21)
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap: Calling submodule eap_ttls to process data
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap_ttls: Authenticate
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap_ttls: (TLS) EAP Continuing ...
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap_ttls: (TLS) EAP Peer sent flags ---
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap_ttls: (TLS) EAP Verification says ok
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap_ttls: (TLS) EAP Done initial handshake
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:143 cbtls_msg() - here 1 - msg_version=0 (0000) content_type=256 (0x100) buf[0]=0x17 buf[1]=0x3
+Fri Mar 18 17:23:28 2022 : Debug: (TLS) Ignoring cbtls_msg call with pseudo content type 256, version 0
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap_ttls: [eaptls process] = ok
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap_ttls: Session established.  Proceeding to decode tunneled attributes
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap_ttls: Got tunneled request
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap_ttls:   User-Name = "bob"
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap_ttls:   MS-CHAP-Challenge = 0x024cf99ad887582e5af30810b06b291d
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap_ttls:   MS-CHAP2-Response = 0x8500ce162ccd3b9afe6c1f8f9ad52a277eeb000000000000000038515632cae59b199be1cbba60d9496077e87369d15d4e9c
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap_ttls:   FreeRADIUS-Proxied-To = 127.0.0.1
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap_ttls: Sending tunneled request
+Fri Mar 18 17:23:28 2022 : Debug: (6) Virtual server inner-tunnel received request
+Fri Mar 18 17:23:28 2022 : Debug: (6)   User-Name = "bob"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   MS-CHAP-Challenge = 0x024cf99ad887582e5af30810b06b291d
+Fri Mar 18 17:23:28 2022 : Debug: (6)   MS-CHAP2-Response = 0x8500ce162ccd3b9afe6c1f8f9ad52a277eeb000000000000000038515632cae59b199be1cbba60d9496077e87369d15d4e9c
+Fri Mar 18 17:23:28 2022 : Debug: (6)   FreeRADIUS-Proxied-To = 127.0.0.1
+Fri Mar 18 17:23:28 2022 : Debug: (6) server inner-tunnel {
+Fri Mar 18 17:23:28 2022 : Debug: (6)   session-state: No State attribute
+Fri Mar 18 17:23:28 2022 : Debug: (6)   # Executing section authorize from file /etc/raddb/sites-enabled/inner-tunnel
+Fri Mar 18 17:23:28 2022 : Debug: (6)     authorize {
+Fri Mar 18 17:23:28 2022 : Debug: (6)       policy filter_username {
+Fri Mar 18 17:23:28 2022 : Debug: (6)         if (&User-Name) {
+Fri Mar 18 17:23:28 2022 : Debug: (6)         if (&User-Name)  -> TRUE
+Fri Mar 18 17:23:28 2022 : Debug: (6)         if (&User-Name)  {
+Fri Mar 18 17:23:28 2022 : Debug: (6)           if (&User-Name =~ / /) {
+Fri Mar 18 17:23:28 2022 : Debug: No old matches
+Fri Mar 18 17:23:28 2022 : Debug: (6)           if (&User-Name =~ / /)  -> FALSE
+Fri Mar 18 17:23:28 2022 : Debug: (6)           if (&User-Name =~ /@[^@]*@/ ) {
+Fri Mar 18 17:23:28 2022 : Debug: No old matches
+Fri Mar 18 17:23:28 2022 : Debug: (6)           if (&User-Name =~ /@[^@]*@/ )  -> FALSE
+Fri Mar 18 17:23:28 2022 : Debug: (6)           if (&User-Name =~ /\.\./ ) {
+Fri Mar 18 17:23:28 2022 : Debug: No old matches
+Fri Mar 18 17:23:28 2022 : Debug: (6)           if (&User-Name =~ /\.\./ )  -> FALSE
+Fri Mar 18 17:23:28 2022 : Debug: (6)           if ((&User-Name =~ /@/) && (&User-Name !~ /@(.+)\.(.+)$/))  {
+Fri Mar 18 17:23:28 2022 : Debug: No old matches
+Fri Mar 18 17:23:28 2022 : Debug: (6)           if ((&User-Name =~ /@/) && (&User-Name !~ /@(.+)\.(.+)$/))   -> FALSE
+Fri Mar 18 17:23:28 2022 : Debug: (6)           if (&User-Name =~ /\.$/)  {
+Fri Mar 18 17:23:28 2022 : Debug: No old matches
+Fri Mar 18 17:23:28 2022 : Debug: (6)           if (&User-Name =~ /\.$/)   -> FALSE
+Fri Mar 18 17:23:28 2022 : Debug: (6)           if (&User-Name =~ /@\./)  {
+Fri Mar 18 17:23:28 2022 : Debug: No old matches
+Fri Mar 18 17:23:28 2022 : Debug: (6)           if (&User-Name =~ /@\./)   -> FALSE
+Fri Mar 18 17:23:28 2022 : Debug: (6)         } # if (&User-Name)  = notfound
+Fri Mar 18 17:23:28 2022 : Debug: (6)       } # policy filter_username = notfound
+Fri Mar 18 17:23:28 2022 : Debug: (6)       modsingle[authorize]: calling chap (rlm_chap)
+Fri Mar 18 17:23:28 2022 : Debug: (6)       modsingle[authorize]: returned from chap (rlm_chap)
+Fri Mar 18 17:23:28 2022 : Debug: (6)       [chap] = noop
+Fri Mar 18 17:23:28 2022 : Debug: (6)       modsingle[authorize]: calling mschap (rlm_mschap)
+Fri Mar 18 17:23:28 2022 : Debug: (6) mschap: Found MS-CHAP attributes.  Setting 'Auth-Type  = mschap'
+Fri Mar 18 17:23:28 2022 : Debug: (6)       modsingle[authorize]: returned from mschap (rlm_mschap)
+Fri Mar 18 17:23:28 2022 : Debug: (6)       [mschap] = ok
+Fri Mar 18 17:23:28 2022 : Debug: (6)       modsingle[authorize]: calling suffix (rlm_realm)
+Fri Mar 18 17:23:28 2022 : Debug: (6) suffix: Checking for suffix after "@"
+Fri Mar 18 17:23:28 2022 : Debug: (6) suffix: No '@' in User-Name = "bob", looking up realm NULL
+Fri Mar 18 17:23:28 2022 : Debug: (6) suffix: No such realm "NULL"
+Fri Mar 18 17:23:28 2022 : Debug: (6)       modsingle[authorize]: returned from suffix (rlm_realm)
+Fri Mar 18 17:23:28 2022 : Debug: (6)       [suffix] = noop
+Fri Mar 18 17:23:28 2022 : Debug: (6)       update control {
+Fri Mar 18 17:23:28 2022 : Debug: (6)         &Proxy-To-Realm := LOCAL
+Fri Mar 18 17:23:28 2022 : Debug: (6)       } # update control = noop
+Fri Mar 18 17:23:28 2022 : Debug: (6)       modsingle[authorize]: calling eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap: No EAP-Message, not doing EAP
+Fri Mar 18 17:23:28 2022 : Debug: (6)       modsingle[authorize]: returned from eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (6)       [eap] = noop
+Fri Mar 18 17:23:28 2022 : Debug: (6)       modsingle[authorize]: calling files (rlm_files)
+Fri Mar 18 17:23:28 2022 : Debug: (6) files: users: Matched entry bob at line 87
+Fri Mar 18 17:23:28 2022 : Debug: (6) files: ::: FROM 1 TO 0 MAX 1
+Fri Mar 18 17:23:28 2022 : Debug: (6) files: ::: Examining Reply-Message
+Fri Mar 18 17:23:28 2022 : Debug: Hello, %{User-Name}
+Fri Mar 18 17:23:28 2022 : Debug: Parsed xlat tree:
+Fri Mar 18 17:23:28 2022 : Debug: literal --> Hello,
+Fri Mar 18 17:23:28 2022 : Debug: attribute --> User-Name
+Fri Mar 18 17:23:28 2022 : Debug: (6) files: EXPAND Hello, %{User-Name}
+Fri Mar 18 17:23:28 2022 : Debug: (6) files:    --> Hello, bob
+Fri Mar 18 17:23:28 2022 : Debug: (6) files: ::: APPENDING Reply-Message FROM 0 TO 0
+Fri Mar 18 17:23:28 2022 : Debug: (6) files: ::: TO in 0 out 0
+Fri Mar 18 17:23:28 2022 : Debug: (6)       modsingle[authorize]: returned from files (rlm_files)
+Fri Mar 18 17:23:28 2022 : Debug: (6)       [files] = ok
+Fri Mar 18 17:23:28 2022 : Debug: (6)       modsingle[authorize]: calling expiration (rlm_expiration)
+Fri Mar 18 17:23:28 2022 : Debug: (6)       modsingle[authorize]: returned from expiration (rlm_expiration)
+Fri Mar 18 17:23:28 2022 : Debug: (6)       [expiration] = noop
+Fri Mar 18 17:23:28 2022 : Debug: (6)       modsingle[authorize]: calling logintime (rlm_logintime)
+Fri Mar 18 17:23:28 2022 : Debug: (6)       modsingle[authorize]: returned from logintime (rlm_logintime)
+Fri Mar 18 17:23:28 2022 : Debug: (6)       [logintime] = noop
+Fri Mar 18 17:23:28 2022 : Debug: (6)       modsingle[authorize]: calling pap (rlm_pap)
+Fri Mar 18 17:23:28 2022 : WARNING: (6) pap: Auth-Type already set.  Not setting to PAP
+Fri Mar 18 17:23:28 2022 : Debug: (6)       modsingle[authorize]: returned from pap (rlm_pap)
+Fri Mar 18 17:23:28 2022 : Debug: (6)       [pap] = noop
+Fri Mar 18 17:23:28 2022 : Debug: (6)     } # authorize = ok
+Fri Mar 18 17:23:28 2022 : Debug: (6)   Found Auth-Type = mschap
+Fri Mar 18 17:23:28 2022 : Debug: (6)   # Executing group from file /etc/raddb/sites-enabled/inner-tunnel
+Fri Mar 18 17:23:28 2022 : Debug: (6)     authenticate {
+Fri Mar 18 17:23:28 2022 : Debug: (6)       modsingle[authenticate]: calling mschap (rlm_mschap)
+Fri Mar 18 17:23:28 2022 : Debug: (6) mschap: Found Cleartext-Password, hashing to create NT-Password
+Fri Mar 18 17:23:28 2022 : Debug: (6) mschap: Creating challenge hash with username: bob
+Fri Mar 18 17:23:28 2022 : Debug: (6) mschap: Client is using MS-CHAPv2
+Fri Mar 18 17:23:28 2022 : Debug: (6) mschap: Adding MS-CHAPv2 MPPE keys
+Fri Mar 18 17:23:28 2022 : Debug: (6)       modsingle[authenticate]: returned from mschap (rlm_mschap)
+Fri Mar 18 17:23:28 2022 : Debug: (6)       [mschap] = ok
+Fri Mar 18 17:23:28 2022 : Debug: (6)     } # authenticate = ok
+Fri Mar 18 17:23:28 2022 : Debug: (6)   # Executing section post-auth from file /etc/raddb/sites-enabled/inner-tunnel
+Fri Mar 18 17:23:28 2022 : Debug: (6)     post-auth {
+Fri Mar 18 17:23:28 2022 : Debug: (6)       if (0) {
+Fri Mar 18 17:23:28 2022 : Debug: (6)       if (0)  -> FALSE
+Fri Mar 18 17:23:28 2022 : Debug: (6)     } # post-auth = noop
+Fri Mar 18 17:23:28 2022 : Debug: (6) } # server inner-tunnel
+Fri Mar 18 17:23:28 2022 : Debug: (6) Virtual server sending reply
+Fri Mar 18 17:23:28 2022 : Debug: (6)   Reply-Message = "Hello, bob"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   MS-CHAP2-Success = 0x85533d35323846434443413344454342453339444632383844454535353730313233444241454544374230
+Fri Mar 18 17:23:28 2022 : Debug: (6)   MS-MPPE-Recv-Key = 0xa4025152500d84cdcb5a59d8d1d8798b
+Fri Mar 18 17:23:28 2022 : Debug: (6)   MS-MPPE-Send-Key = 0xfc8bc44b8149dcd462a802e33f366f54
+Fri Mar 18 17:23:28 2022 : Debug: (6)   MS-MPPE-Encryption-Policy = Encryption-Allowed
+Fri Mar 18 17:23:28 2022 : Debug: (6)   MS-MPPE-Encryption-Types = RC4-40or128-bit-Allowed
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap_ttls: Got tunneled Access-Accept
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap_ttls: Got MS-CHAP2-Success, tunneling it to the client in a challenge
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap_ttls: Sending tunneled reply attributes
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap_ttls:   MS-CHAP2-Success = 0x85533d35323846434443413344454342453339444632383844454535353730313233444241454544374230
+Fri Mar 18 17:23:28 2022 : Debug: ### src/main/cb.c:143 cbtls_msg() - here 1 - msg_version=0 (0000) content_type=256 (0x100) buf[0]=0x17 buf[1]=0x3
+Fri Mar 18 17:23:28 2022 : Debug: (TLS) Ignoring cbtls_msg call with pseudo content type 256, version 0
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap: Sending EAP Request (code 1) ID 132 length 95
+Fri Mar 18 17:23:28 2022 : Debug: (6) eap: EAP session adding &reply:State = 0xc3869b68c5028e1d
+Fri Mar 18 17:23:28 2022 : Debug: (6)     modsingle[authenticate]: returned from eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (6)     [eap] = handled
+Fri Mar 18 17:23:28 2022 : Debug: (6)   } # authenticate = handled
+Fri Mar 18 17:23:28 2022 : Debug: (6) Using Post-Auth-Type Challenge
+Fri Mar 18 17:23:28 2022 : Debug: (6) # Executing group from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (6)   Challenge { ... } # empty sub-section is ignored
+Fri Mar 18 17:23:28 2022 : Debug: (6) session-state: Saving cached attributes
+Fri Mar 18 17:23:28 2022 : Debug: (6)   Framed-MTU = 994
+Fri Mar 18 17:23:28 2022 : Debug: (6)   TLS-Session-Information = "(TLS) recv TLS 1.3 Handshake, ClientHello"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerHello"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, Certificate"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerKeyExchange"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerHelloDone"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   TLS-Session-Information = "(TLS) recv TLS 1.2 Handshake, ClientKeyExchange"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   TLS-Session-Information = "(TLS) recv TLS 1.2 Handshake, Finished"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   TLS-Session-Information = "(TLS) send TLS 1.2 ChangeCipherSpec"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, Finished"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   TLS-Session-Cipher-Suite = "ECDHE-RSA-AES256-GCM-SHA384"
+Fri Mar 18 17:23:28 2022 : Debug: (6)   TLS-Session-Version = "TLS 1.2"
+Fri Mar 18 17:23:28 2022 : Debug: (6) Sent Access-Challenge Id 6 from 127.0.0.1:1812 to 127.0.0.1:52308 length 153
+Fri Mar 18 17:23:28 2022 : Debug: (6)   EAP-Message = 0x0184005f15800000005517030300504ff18f3f3bcf12c048c19d1f5e8161c9ce8af16d9729e97cb18297a32964c5a0ff89bd9d7755f6762e93db67235a3a84fcbe3116ae2a2f80114b432aa2ab3bf83a636c2fa5d90777cface37d005ec9cc
+Fri Mar 18 17:23:28 2022 : Debug: (6)   Message-Authenticator = 0x00000000000000000000000000000000
+Fri Mar 18 17:23:28 2022 : Debug: (6)   State = 0xc3869b68c5028e1d46b23e058d828ef6
+Fri Mar 18 17:23:28 2022 : Debug: (6) Finished request
+Fri Mar 18 17:23:28 2022 : Debug: Waking up in 4.9 seconds.
+Fri Mar 18 17:23:28 2022 : Debug: (7) Received Access-Request Id 7 from 127.0.0.1:52308 to 127.0.0.1:1812 length 142
+Fri Mar 18 17:23:28 2022 : Debug: (7)   User-Name = "anonymous"
+Fri Mar 18 17:23:28 2022 : Debug: (7)   NAS-IP-Address = 127.0.0.1
+Fri Mar 18 17:23:28 2022 : Debug: (7)   Calling-Station-Id = "02-00-00-00-00-01"
+Fri Mar 18 17:23:28 2022 : Debug: (7)   Framed-MTU = 1400
+Fri Mar 18 17:23:28 2022 : Debug: (7)   NAS-Port-Type = Wireless-802.11
+Fri Mar 18 17:23:28 2022 : Debug: (7)   Service-Type = Framed-User
+Fri Mar 18 17:23:28 2022 : Debug: (7)   Connect-Info = "CONNECT 11Mbps 802.11b"
+Fri Mar 18 17:23:28 2022 : Debug: (7)   EAP-Message = 0x028400061500
+Fri Mar 18 17:23:28 2022 : Debug: (7)   State = 0xc3869b68c5028e1d46b23e058d828ef6
+Fri Mar 18 17:23:28 2022 : Debug: (7)   Message-Authenticator = 0xe547cafe8d755ec9d9f9ba080c618d54
+Fri Mar 18 17:23:28 2022 : Debug: (7) Restoring &session-state
+Fri Mar 18 17:23:28 2022 : Debug: (7)   &session-state:Framed-MTU = 994
+Fri Mar 18 17:23:28 2022 : Debug: (7)   &session-state:TLS-Session-Information = "(TLS) recv TLS 1.3 Handshake, ClientHello"
+Fri Mar 18 17:23:28 2022 : Debug: (7)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerHello"
+Fri Mar 18 17:23:28 2022 : Debug: (7)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, Certificate"
+Fri Mar 18 17:23:28 2022 : Debug: (7)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerKeyExchange"
+Fri Mar 18 17:23:28 2022 : Debug: (7)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, ServerHelloDone"
+Fri Mar 18 17:23:28 2022 : Debug: (7)   &session-state:TLS-Session-Information = "(TLS) recv TLS 1.2 Handshake, ClientKeyExchange"
+Fri Mar 18 17:23:28 2022 : Debug: (7)   &session-state:TLS-Session-Information = "(TLS) recv TLS 1.2 Handshake, Finished"
+Fri Mar 18 17:23:28 2022 : Debug: (7)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 ChangeCipherSpec"
+Fri Mar 18 17:23:28 2022 : Debug: (7)   &session-state:TLS-Session-Information = "(TLS) send TLS 1.2 Handshake, Finished"
+Fri Mar 18 17:23:28 2022 : Debug: (7)   &session-state:TLS-Session-Cipher-Suite = "ECDHE-RSA-AES256-GCM-SHA384"
+Fri Mar 18 17:23:28 2022 : Debug: (7)   &session-state:TLS-Session-Version = "TLS 1.2"
+Fri Mar 18 17:23:28 2022 : Debug: (7) # Executing section authorize from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (7)   authorize {
+Fri Mar 18 17:23:28 2022 : Debug: (7)     modsingle[authorize]: calling mschap (rlm_mschap)
+Fri Mar 18 17:23:28 2022 : Debug: (7)     modsingle[authorize]: returned from mschap (rlm_mschap)
+Fri Mar 18 17:23:28 2022 : Debug: (7)     [mschap] = noop
+Fri Mar 18 17:23:28 2022 : Debug: (7)     modsingle[authorize]: calling eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (7) eap: Peer sent EAP Response (code 2) ID 132 length 6
+Fri Mar 18 17:23:28 2022 : Debug: (7) eap: Continuing tunnel setup
+Fri Mar 18 17:23:28 2022 : Debug: (7)     modsingle[authorize]: returned from eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (7)     [eap] = ok
+Fri Mar 18 17:23:28 2022 : Debug: (7)   } # authorize = ok
+Fri Mar 18 17:23:28 2022 : Debug: (7) Found Auth-Type = eap
+Fri Mar 18 17:23:28 2022 : Debug: (7) # Executing group from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (7)   authenticate {
+Fri Mar 18 17:23:28 2022 : Debug: (7)     modsingle[authenticate]: calling eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (7) eap: Expiring EAP session with state 0xc3869b68c5028e1d
+Fri Mar 18 17:23:28 2022 : Debug: (7) eap: Finished EAP session with state 0xc3869b68c5028e1d
+Fri Mar 18 17:23:28 2022 : Debug: (7) eap: Previous EAP request found for state 0xc3869b68c5028e1d, released from the list
+Fri Mar 18 17:23:28 2022 : Debug: (7) eap: Peer sent packet with method EAP TTLS (21)
+Fri Mar 18 17:23:28 2022 : Debug: (7) eap: Calling submodule eap_ttls to process data
+Fri Mar 18 17:23:28 2022 : Debug: (7) eap_ttls: Authenticate
+Fri Mar 18 17:23:28 2022 : Debug: (7) eap_ttls: (TLS) EAP Continuing ...
+Fri Mar 18 17:23:28 2022 : Debug: (7) eap_ttls: (TLS) EAP Peer sent flags ---
+Fri Mar 18 17:23:28 2022 : Debug: (7) eap_ttls: (TLS) Peer ACKed our handshake fragment.  handshake is finished
+Fri Mar 18 17:23:28 2022 : Debug: (7) eap_ttls: (TLS) EAP Verification says success
+Fri Mar 18 17:23:28 2022 : Debug: (7) eap_ttls: [eaptls process] = success
+Fri Mar 18 17:23:28 2022 : Debug: (7) eap: Sending EAP Success (code 3) ID 132 length 4
+Fri Mar 18 17:23:28 2022 : Debug: (7) eap: Freeing handler
+Fri Mar 18 17:23:28 2022 : Debug: (7)     modsingle[authenticate]: returned from eap (rlm_eap)
+Fri Mar 18 17:23:28 2022 : Debug: (7)     [eap] = ok
+Fri Mar 18 17:23:28 2022 : Debug: (7)   } # authenticate = ok
+Fri Mar 18 17:23:28 2022 : Debug: (7) # Executing section post-auth from file /etc/raddb/sites-enabled/default
+Fri Mar 18 17:23:28 2022 : Debug: (7)   post-auth {
+Fri Mar 18 17:23:28 2022 : Debug: (7)     if (session-state:User-Name && reply:User-Name && request:User-Name && (reply:User-Name == request:User-Name)) {
+Fri Mar 18 17:23:28 2022 : Debug: (7)     if (session-state:User-Name && reply:User-Name && request:User-Name && (reply:User-Name == request:User-Name))  -> FALSE
+Fri Mar 18 17:23:28 2022 : Debug: (7)     update {
+Fri Mar 18 17:23:28 2022 : Debug: (7)       &reply::Framed-MTU += &session-state:Framed-MTU[*] -> 994
+Fri Mar 18 17:23:28 2022 : Debug: (7)       &reply::TLS-Session-Information += &session-state:TLS-Session-Information[*] -> '(TLS) recv TLS 1.3 Handshake, ClientHello'
+Fri Mar 18 17:23:28 2022 : Debug: (7)       &reply::TLS-Session-Information += &session-state:TLS-Session-Information[*] -> '(TLS) send TLS 1.2 Handshake, ServerHello'
+Fri Mar 18 17:23:28 2022 : Debug: (7)       &reply::TLS-Session-Information += &session-state:TLS-Session-Information[*] -> '(TLS) send TLS 1.2 Handshake, Certificate'
+Fri Mar 18 17:23:28 2022 : Debug: (7)       &reply::TLS-Session-Information += &session-state:TLS-Session-Information[*] -> '(TLS) send TLS 1.2 Handshake, ServerKeyExchange'
+Fri Mar 18 17:23:28 2022 : Debug: (7)       &reply::TLS-Session-Information += &session-state:TLS-Session-Information[*] -> '(TLS) send TLS 1.2 Handshake, ServerHelloDone'
+Fri Mar 18 17:23:28 2022 : Debug: (7)       &reply::TLS-Session-Information += &session-state:TLS-Session-Information[*] -> '(TLS) recv TLS 1.2 Handshake, ClientKeyExchange'
+Fri Mar 18 17:23:28 2022 : Debug: (7)       &reply::TLS-Session-Information += &session-state:TLS-Session-Information[*] -> '(TLS) recv TLS 1.2 Handshake, Finished'
+Fri Mar 18 17:23:28 2022 : Debug: (7)       &reply::TLS-Session-Information += &session-state:TLS-Session-Information[*] -> '(TLS) send TLS 1.2 ChangeCipherSpec'
+Fri Mar 18 17:23:28 2022 : Debug: (7)       &reply::TLS-Session-Information += &session-state:TLS-Session-Information[*] -> '(TLS) send TLS 1.2 Handshake, Finished'
+Fri Mar 18 17:23:28 2022 : Debug: (7)       &reply::TLS-Session-Cipher-Suite += &session-state:TLS-Session-Cipher-Suite[*] -> 'ECDHE-RSA-AES256-GCM-SHA384'
+Fri Mar 18 17:23:28 2022 : Debug: (7)       &reply::TLS-Session-Version += &session-state:TLS-Session-Version[*] -> 'TLS 1.2'
+Fri Mar 18 17:23:28 2022 : Debug: (7)     } # update = noop
+Fri Mar 18 17:23:28 2022 : Debug: (7)     modsingle[post-auth]: calling exec (rlm_exec)
+Fri Mar 18 17:23:28 2022 : Debug: (7)     modsingle[post-auth]: returned from exec (rlm_exec)
+Fri Mar 18 17:23:28 2022 : Debug: (7)     [exec] = noop
+Fri Mar 18 17:23:28 2022 : Debug: (7)     policy remove_reply_message_if_eap {
+Fri Mar 18 17:23:28 2022 : Debug: (7)       if (&reply:EAP-Message && &reply:Reply-Message) {
+Fri Mar 18 17:23:28 2022 : Debug: (7)       if (&reply:EAP-Message && &reply:Reply-Message)  -> FALSE
+Fri Mar 18 17:23:28 2022 : Debug: (7)       else {
+Fri Mar 18 17:23:28 2022 : Debug: (7)         modsingle[post-auth]: calling noop (rlm_always)
+Fri Mar 18 17:23:28 2022 : Debug: (7)         modsingle[post-auth]: returned from noop (rlm_always)
+Fri Mar 18 17:23:28 2022 : Debug: (7)         [noop] = noop
+Fri Mar 18 17:23:28 2022 : Debug: (7)       } # else = noop
+Fri Mar 18 17:23:28 2022 : Debug: (7)     } # policy remove_reply_message_if_eap = noop
+Fri Mar 18 17:23:28 2022 : Debug: (7)     if (EAP-Key-Name && &reply:EAP-Session-Id) {
+Fri Mar 18 17:23:28 2022 : Debug: (7)     if (EAP-Key-Name && &reply:EAP-Session-Id)  -> FALSE
+Fri Mar 18 17:23:28 2022 : Debug: (7)   } # post-auth = noop
+Fri Mar 18 17:23:28 2022 : Debug: (7) Sent Access-Accept Id 7 from 127.0.0.1:1812 to 127.0.0.1:52308 length 177
+Fri Mar 18 17:23:28 2022 : Debug: (7)   MS-MPPE-Recv-Key = 0x1909b70e7c9272ea3a4dc613cae7ab67f439d91d691ecc9854ae64aeb0baa026
+Fri Mar 18 17:23:28 2022 : Debug: (7)   MS-MPPE-Send-Key = 0x62317f36747d4a63661c3f21dbd4c978f1e838feda68ff2f91ab14c04eab7076
+Fri Mar 18 17:23:28 2022 : Debug: (7)   EAP-Message = 0x03840004
+Fri Mar 18 17:23:28 2022 : Debug: (7)   Message-Authenticator = 0x00000000000000000000000000000000
+Fri Mar 18 17:23:28 2022 : Debug: (7)   User-Name = "anonymous"
+Fri Mar 18 17:23:28 2022 : Debug: (7)   Framed-MTU += 994
+Fri Mar 18 17:23:28 2022 : Debug: (7) Finished request
+Fri Mar 18 17:23:28 2022 : Debug: Waking up in 4.9 seconds.
