@@ -81,7 +81,7 @@ RUN groupadd ubuntu && \
 #
 #  Grab & Install OpenSSL 3.0x in /opt/openssl
 #
-ENV OPENSSL_VERSION=3.0.1
+ENV OPENSSL_VERSION=3.0.2
 
 WORKDIR /opt/src
 RUN wget https://www.openssl.org/source/openssl-${OPENSSL_VERSION}.tar.gz
@@ -98,7 +98,7 @@ RUN export PATH
 #  Shallow clone the FreeRADIUS source
 #
 WORKDIR /opt/src
-RUN git clone ${fr_repo}
+RUN git       clone    ${fr_repo}
 WORKDIR /opt/src/freeradius-server
 
 #
@@ -137,6 +137,7 @@ COPY config/eap-ttls-mschapv2.conf /root/eap-ttls-mschapv2.conf
 # Configs
 COPY config/authorize /etc/raddb/mods-config/files/authorize
 COPY config/eap /etc/raddb/mods-available/eap
+COPY config/default /etc/raddb/sites-available/default
 RUN sed 's/@@SET_SECLEVEL@@/0/g' -i /etc/raddb/mods-available/eap
 
 #
